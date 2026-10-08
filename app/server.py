@@ -20,7 +20,7 @@ from pathlib import Path
 import torch
 
 from auth import SESSION_DAYS, AuthError, UserStore
-from predictor import CLASS_INFO, SERIOUS, InvalidImage, Predictor
+from predictor import CLASS_INFO, GUIDANCE, SERIOUS, URGENT_SIGNS, InvalidImage, Predictor
 
 APP = Path(__file__).resolve().parent
 MAX_UPLOAD = 20 * 1024 * 1024
@@ -99,8 +99,9 @@ class Handler(SimpleHTTPRequestHandler):
         if self.path == "/api/info":
             p = self.predictor
             return self.send_json({**p.meta, "device": "GPU" if p.device.type == "cuda" else "CPU",
-                                   "classes": {c: {"name": n, "about": a, "serious": c in SERIOUS}
-                                               for c, (n, a) in CLASS_INFO.items()}})
+                                   "classes": {c: {"name": n, "about": a, "serious": c in SERIOUS, "care": GUIDANCE[c]}
+                                               for c, (n, a) in CLASS_INFO.items()},
+                                   "urgent_signs": URGENT_SIGNS})
         if self.path == "/api/me":
             user = self.current_user()
             return self.send_json({"user": user[1] if user else None})

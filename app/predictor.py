@@ -36,6 +36,54 @@ CLASS_INFO = {
 }
 SERIOUS = {"mel", "bcc", "akiec"}
 
+# What to do next, per lesion type. General guidance only (no medicines named), in line with
+# common public-health advice. level: "urgent" (see a doctor soon), "doctor" (book an
+# appointment), "selfcare" (usually harmless; look after it and watch for changes).
+GUIDANCE = {
+    "mel": {"level": "urgent", "headline": "See a doctor soon, ideally within 2 weeks", "steps": [
+        "Book an appointment with a GP or dermatologist and show them this lesion. Early treatment of melanoma works very well.",
+        "Do not try to remove, cut, burn or treat it at home.",
+        "Take a clear photo now so the doctor can see if it changes.",
+        "Keep it out of the sun and use SPF 30+ sunscreen on exposed skin."]},
+    "bcc": {"level": "doctor", "headline": "Book a doctor's appointment in the next few weeks", "steps": [
+        "Basal cell carcinoma grows slowly and rarely spreads, but it does not go away on its own and needs treatment.",
+        "A doctor can confirm it and remove it, usually with a minor procedure.",
+        "Do not pick at it or try home removal products.",
+        "Protect your skin from the sun: SPF 30+, a hat and shade around midday."]},
+    "akiec": {"level": "doctor", "headline": "Book a doctor's appointment in the next few weeks", "steps": [
+        "Actinic keratosis is caused by sun damage and can slowly turn into skin cancer, so it is worth treating.",
+        "A doctor can treat it simply, for example by freezing it or with a prescribed cream.",
+        "Do not scratch or pick at the scaly surface.",
+        "Use SPF 30+ sunscreen every day on sun-exposed skin to prevent new patches."]},
+    "nv": {"level": "selfcare", "headline": "Usually no treatment needed", "steps": [
+        "Ordinary moles are harmless and don't need treatment.",
+        "Check it once a month with the ABCDE rule: Asymmetry, uneven Border, more than one Colour, Diameter over 6 mm, or Evolving (changing).",
+        "Take a photo now so you can compare it later.",
+        "Use sunscreen and avoid sunburn and tanning beds, which raise the risk of new moles becoming melanoma."]},
+    "bkl": {"level": "selfcare", "headline": "Usually no treatment needed", "steps": [
+        "Benign keratoses (such as seborrheic keratoses and sun spots) are harmless and very common with age.",
+        "Don't pick or scratch it; it can bleed or get irritated.",
+        "If it itches, a fragrance-free moisturiser can help. A doctor can remove it if it bothers you.",
+        "Use sunscreen to stop sun spots from darkening."]},
+    "df": {"level": "selfcare", "headline": "Usually no treatment needed", "steps": [
+        "Dermatofibromas are harmless firm bumps and often stay the same for years.",
+        "Take care when shaving over it, as nicking it can make it sore.",
+        "A doctor can remove it if it is painful or bothers you, although that leaves a small scar.",
+        "Have it checked if it grows quickly or changes colour."]},
+    "vasc": {"level": "selfcare", "headline": "Usually no treatment needed", "steps": [
+        "Vascular lesions such as cherry angiomas are harmless clusters of blood vessels.",
+        "If it bleeds after a knock, press on it with a clean cloth for 10 minutes.",
+        "A doctor can remove it for cosmetic reasons or if it keeps bleeding.",
+        "Have it checked if it grows quickly or bleeds without being injured."]},
+}
+# Shown with every result: signs that mean seeing a doctor whatever the model says
+URGENT_SIGNS = [
+    "It bleeds, oozes or crusts without being injured.",
+    "It grows, or changes shape or colour, over a few weeks.",
+    "It is a sore that hasn't healed after 3 to 4 weeks.",
+    "It is new, looks different from your other spots, or becomes painful or itchy.",
+]
+
 
 class InvalidImage(Exception):
     pass

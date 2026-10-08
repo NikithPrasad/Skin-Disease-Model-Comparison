@@ -248,6 +248,17 @@ class ServerTests(unittest.TestCase):
         self.assertEqual(leaks, [], "uploaded photo found on disk")
 
 
+class GuidanceTests(unittest.TestCase):
+    def test_every_lesion_type_has_advice(self):
+        from predictor import CLASSES, GUIDANCE, URGENT_SIGNS
+        self.assertEqual(set(GUIDANCE), set(CLASSES))
+        for code, g in GUIDANCE.items():
+            self.assertIn(g["level"], {"urgent", "doctor", "selfcare"}, code)
+            self.assertTrue(g["headline"] and len(g["steps"]) >= 3, code)
+        self.assertEqual(GUIDANCE["mel"]["level"], "urgent")  # melanoma always means see a doctor
+        self.assertTrue(URGENT_SIGNS)
+
+
 @unittest.skipUnless((ROOT / "app" / "models" / "meta.json").exists(), "trained models not exported yet")
 class RealModelTests(ServerTests):
     """Runs the same server tests against the real trained models."""

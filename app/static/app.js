@@ -175,6 +175,7 @@ function clearPhoto() {
   $("hint").hidden = false; $("busy").hidden = true; $("clear").hidden = true;
   $("truth").textContent = ""; $("error").hidden = true;
   $("verdict").hidden = true;
+  $("care").hidden = true;
   placeholders(false);
 }
 
@@ -188,6 +189,7 @@ async function analyse(blob, truth) {
   $("preview").src = state.previewUrl; $("preview").hidden = false; $("hint").hidden = true;
   $("busy").hidden = false; $("clear").hidden = false;
   $("verdict").hidden = true;
+  $("care").hidden = true;
   placeholders(true);
   $("truth").textContent = "";
   if (truth) $("truth").append("True diagnosis: ", el("b", { text: className(truth) }));
@@ -216,17 +218,21 @@ function render(results, truth) {
   }
   const [winner, n] = Object.entries(votes).sort((a, b) => b[1] - a[1] || mass[b[0]] - mass[a[0]])[0];
   const info = state.info.classes[winner];
+  const melVotes = votes.mel || 0, disagree = n < 3;
+  // Never call a lesion "harmless" while the advice says to see a doctor
+  const tag = info.serious ? ["warn", "Can be serious"] : (melVotes || disagree) ? ["warn", "Get it checked"] : ["ok", "Usually harmless"];
 
   let sub = n === results.length ? "All four models agree." : `${n} of ${results.length} models agree.`;
   if (truth) sub += truth === winner ? " This matches the true diagnosis." : ` The true diagnosis is ${className(truth)}.`;
   const v = $("verdict");
   v.replaceChildren(
     el("div", { class: "label", text: "Most models say" }),
-    el("div", { class: "big" }, info.name, el("span", { class: "tag " + (info.serious ? "warn" : "ok"), text: info.serious ? "Can be serious" : "Usually harmless" })),
+    el("div", { class: "big" }, info.name, el("span", { class: "tag " + tag[0], text: tag[1] })),
     el("div", { class: "sub", text: sub }),
     el("p", { class: "about", text: info.about }),
   );
   v.hidden = false;
+  renderCare(winner, n, melVotes, results.length);
 
   $("models").replaceChildren(...results.map((r, i) => {
     const bars = r.probs.map((p) => {
@@ -245,6 +251,27 @@ function render(results, truth) {
     card.style.setProperty("--i", i);
     return card;
   }));
+}
+
+// What to do next. The majority answer decides the advice, but any model saying melanoma, or the
+// models disagreeing, pushes it up to "see a doctor", because missing a cancer is the costly mistake.
+function renderCare(winner, n, melVotes, total) {
+  const m = state.info, care = m.classes[winner].care;
+  let level = care.level, headline = care.headline, why = "", steps = care.steps;
+  if (melVotes && winner !== "mel") {
+    level = "urgent"; headline = "See a doctor soon: melanoma can't be ruled out";
+    why = `${melVotes} of ${total} models ${melVotes === 1 ? "thinks" : "think"} this could be a melanoma, so it is worth having checked.`;
+    steps = m.classes.mel.care.steps;
+  } else if (level === "selfcare" && n < 3) {
+    level = "doctor"; headline = "Have a doctor take a look";
+    why = "The models disagree about this photo, so a doctor's opinion is the safe next step. Until then:";
+  }
+  $("care").replaceChildren(
+    el("div", { class: "care " + level }, el("h3", { text: headline }), why && el("p", { class: "why", text: why }),
+      el("ol", {}, ...steps.map((s) => el("li", { text: s })))),
+    el("div", { class: "signs" }, el("h3", { text: "See a doctor straight away if" }),
+      el("ul", {}, ...m.urgent_signs.map((s) => el("li", { text: s })))));
+  $("care").hidden = false;
 }
 
 // ---------- comparison table ----------
@@ -314,7 +341,6 @@ function renderComparison(info) {
 function renderExamples(info) {
   // ?v= changes whenever export_models.py picks a different photo, so browsers never show a stale cached sample
   const src = (code) => `examples/${code}.jpg?v=${info.examples?.[code] ?? ""}`;
-  for (const img of document.querySelectorAll(".mosaic img[data-code]")) img.src = src(img.dataset.code);
   const box = $("examples");
   for (const code of Object.keys(info.classes)) {
     const b = el("button", { class: "ex", type: "button", title: info.classes[code].name, "aria-label": `Try a sample ${info.classes[code].name} photo` },
