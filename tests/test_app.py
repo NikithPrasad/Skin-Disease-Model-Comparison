@@ -172,7 +172,7 @@ class ServerTests(unittest.TestCase):
     def test_page_has_security_headers(self):
         res, body = self.request("GET", "/")
         self.assertEqual(res.status, 200)
-        self.assertIn(b"Skin Lesion Classifier", body)
+        self.assertIn(b"SkinCheck", body)
         self.assertIn("script-src 'self'", res.getheader("Content-Security-Policy"))
         self.assertEqual(res.getheader("X-Content-Type-Options"), "nosniff")
 

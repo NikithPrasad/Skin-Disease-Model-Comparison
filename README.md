@@ -59,15 +59,22 @@ the main metric, with balanced accuracy, ROC-AUC and melanoma recall alongside p
 
 ## Website (runs on any laptop — no GPU, no API key)
 
-`app/` is a local website: create an account, upload a lesion photo, and see all four models'
-predictions side by side, plus the full comparison tables and graphs. The trained models are
-included in `app/models/` (~70 MB total), so nothing needs training and nothing is sent to the
-internet. On a normal laptop CPU, one photo through all four models takes well under a second.
+`app/` is **SkinCheck Compare**, a local website: create an account, upload a lesion image, and all four
+models give their indication side by side, plus the full comparison table and charts. The trained models
+are included in `app/models/` (~70 MB total), so nothing needs training and nothing is sent to the
+internet. On a normal laptop CPU, one image through all four models takes well under a second.
 
-Each result says what the lesion might be (by majority vote), shows where in the photo each model
-looked (Grad-CAM: ignored areas are dimmed), and gives plain advice: how it is usually treated, what to
-do now, and when to see a doctor. Any model saying melanoma, or the models disagreeing, raises the advice
-to "see a doctor". The advice is general information, not a diagnosis.
+It shares the calm, accessible design of [SkinCheck](https://github.com/NikithPrasad/Skin-Disease-Detection)
+(light theme, 18px text, WCAG AA contrast, large buttons, no images of skin conditions in the interface).
+Each result says *"Your image most closely matches..."* (majority vote) with how many models agree, what
+it means, what to do next, how it is usually managed and when to talk to a doctor. If any model sees
+melanoma, or the models disagree, the advice is *"Consider discussing this result with a qualified
+healthcare professional"*; otherwise *"This result appears less concerning, but changes in a skin lesion
+should still be monitored"*. Optional, folded away: where each model looked (Grad-CAM) and each model's
+full answer. Every result ends with *"This is an AI-based prediction, not a medical diagnosis."*
+
+Unlike SkinCheck, these four 7-class models have no "healthy skin" answer and no check that the image is a
+close-up of skin. Photos by Ato Aikins, Sarah Sheedy, Asal Davletyarovaasss and Nate Johnston on Unsplash.
 
 **Windows (easiest):**
 1. Install Python 3.10+ from python.org (tick "Add python.exe to PATH").

@@ -27,67 +27,71 @@ STD = torch.tensor([0.229, 0.224, 0.225]).view(1, 3, 1, 1)
 Image.MAX_IMAGE_PIXELS = 50_000_000  # refuse absurdly large images (decompression bombs)
 
 CLASS_INFO = {
-    "akiec": ("Actinic keratosis", "Rough, scaly patch from sun damage. Pre-cancerous and can turn into skin cancer."),
-    "bcc": ("Basal cell carcinoma", "The most common skin cancer. Grows slowly and rarely spreads, but needs treatment."),
-    "bkl": ("Benign keratosis", "Harmless growth such as a seborrheic keratosis or sun spot."),
-    "df": ("Dermatofibroma", "Harmless firm bump in the skin, often on the legs."),
-    "mel": ("Melanoma", "The most dangerous skin cancer. Early detection matters a lot."),
-    "nv": ("Melanocytic nevus", "An ordinary mole. Almost always harmless."),
-    "vasc": ("Vascular lesion", "Growth made of blood vessels, such as a cherry angioma. Usually harmless."),
+    "akiec": ("Actinic keratosis", "A rough, scaly patch caused by years of sun exposure. It is common and treatable, and worth having looked at because it can change over time."),
+    "bcc": ("Basal cell carcinoma", "A common, slow-growing type of skin cancer. It rarely spreads and is very treatable."),
+    "bkl": ("Benign keratosis", "A common, harmless skin growth, such as a sun spot or a raised spot that appears with age."),
+    "df": ("Dermatofibroma", "A common, harmless firm bump in the skin, often on the legs."),
+    "mel": ("Melanoma", "A type of skin cancer that starts in the cells that give skin its colour. When found early it is very treatable."),
+    "nv": ("Melanocytic nevus", "An ordinary mole. Most people have many, and they are usually harmless."),
+    "vasc": ("Vascular lesion", "A small growth made of blood vessels, such as a cherry spot. Usually harmless."),
 }
 SERIOUS = {"mel", "bcc", "akiec"}
 
-# Plain-language guidance per lesion type. General information only (no medicines named), in line
-# with common public-health advice.
-#   level      "urgent" (please talk to a doctor), "doctor" (worth talking to a doctor), "selfcare" (usually harmless)
-#   headline   the one-line answer to "what should I do?"
+CONSIDER = "Consider discussing this result with a qualified healthcare professional"
+MONITOR = "This result appears less concerning, but changes in a skin lesion should still be monitored"
+
+# Plain-language guidance per type. General information only (no medicines named), in line with
+# common public-health advice. The AI never decides for the user whether they need a doctor.
+#   level      "urgent" / "doctor": worth discussing with a professional; "selfcare": appears less concerning
+#   headline   the main "what to do next" message
 #   looks      what this condition typically looks like (general signs, not read from the photo)
-#   treatment  how it is usually dealt with
+#   treatment  how it is usually managed
 #   steps      what the person can do now
 GUIDANCE = {
-    "mel": {"level": "urgent", "headline": "This could be a melanoma, so we'd kindly ask you to talk to a doctor",
+    "mel": {"level": "urgent", "headline": CONSIDER,
             "looks": "uneven colours (brown, black, sometimes blue-grey or red), an irregular edge and a lopsided shape",
-            "treatment": "A doctor removes it with a small operation. Caught early, this usually cures it completely.",
-            "steps": ["When you can, please book an appointment with a GP or dermatologist and show them this spot. It's best not to wait more than a couple of weeks.",
+            "treatment": "If a doctor confirms it, it is usually removed with a small operation. Found early, this is very effective.",
+            "steps": ["Book an appointment with a GP or dermatologist and show them this spot. It is a good idea to arrange this soon rather than waiting.",
+                      "Take a clear photo now, so you can show the doctor and notice any changes.",
                       "Please don't try to remove or treat it at home.",
-                      "Take a clear photo now so the doctor can see if it changes.",
-                      "Keep it out of the sun and use SPF 30+ sunscreen."]},
-    "bcc": {"level": "doctor", "headline": "This may need treatment, so we'd suggest talking to a doctor when you can",
+                      "Protect it from the sun and use SPF 30+ sunscreen."]},
+    "bcc": {"level": "doctor", "headline": CONSIDER,
             "looks": "a shiny, pearly or pink bump, sometimes with tiny visible blood vessels or a small sore in the middle",
-            "treatment": "It is usually removed with a minor procedure, or treated with a cream the doctor prescribes. Once treated it rarely comes back.",
-            "steps": ["It grows slowly and rarely spreads, so this is not an emergency, but it won't go away on its own.",
-                      "Don't pick at it or use home removal products.",
+            "treatment": "If a doctor confirms it, it is usually removed with a minor procedure or treated with a prescribed cream. Once treated it rarely comes back.",
+            "steps": ["Mention it to a GP or dermatologist at your next convenient appointment.",
+                      "Avoid picking at it or using home removal products.",
                       "Protect your skin from the sun: SPF 30+, a hat and shade around midday."]},
-    "akiec": {"level": "doctor", "headline": "This may need treatment, so we'd suggest talking to a doctor when you can",
+    "akiec": {"level": "doctor", "headline": CONSIDER,
               "looks": "a rough, dry, scaly patch, pink or red, on skin that gets a lot of sun",
               "treatment": "Most patches clear with a simple treatment from a doctor, such as freezing, a prescribed cream or light therapy.",
-              "steps": ["Treating it stops it from slowly turning into skin cancer.",
-                        "Don't scratch or pick at the scaly surface.",
-                        "Use SPF 30+ sunscreen every day to prevent new patches."]},
-    "nv": {"level": "selfcare", "headline": "No need to see a doctor unless it changes",
+              "steps": ["Mention it to a GP or dermatologist at your next convenient appointment.",
+                        "Avoid scratching or picking at the scaly surface.",
+                        "Use SPF 30+ sunscreen every day to help prevent new patches."]},
+    "nv": {"level": "selfcare", "headline": MONITOR,
            "looks": "an evenly coloured brown spot with a smooth, regular edge",
-           "treatment": "No treatment is needed; ordinary moles are harmless. A doctor can remove one if it bothers you.",
-           "steps": ["Check it once a month with the ABCDE rule: Asymmetry, uneven Border, several Colours, Diameter over 6 mm, or Evolving (changing).",
-                     "Take a photo now so you can compare it later.",
+           "treatment": "Ordinary moles usually need no treatment. A doctor can remove one if it bothers you.",
+           "steps": ["Check it once a month using the ABCDE guide: Asymmetry, uneven Border, several Colours, Diameter over 6 mm, or Evolving (changing).",
+                     "Take a photo now, so you can compare it later.",
                      "Use sunscreen and avoid sunburn and tanning beds."]},
-    "bkl": {"level": "selfcare", "headline": "No need to see a doctor unless it changes",
+    "bkl": {"level": "selfcare", "headline": MONITOR,
             "looks": "a waxy, 'stuck-on' looking light or dark brown spot, often with a slightly rough surface",
-            "treatment": "No treatment is needed. If it itches or catches on clothing, a doctor can freeze it off quickly.",
-            "steps": ["Don't pick or scratch it; it can bleed or get irritated.",
+            "treatment": "Usually no treatment is needed. If it itches or catches on clothing, a doctor can remove it quickly.",
+            "steps": ["Try not to pick or scratch it, as it can bleed or get irritated.",
                       "If it itches, a fragrance-free moisturiser can help.",
                       "Use sunscreen to stop sun spots from getting darker."]},
-    "df": {"level": "selfcare", "headline": "No need to see a doctor unless it changes",
+    "df": {"level": "selfcare", "headline": MONITOR,
            "looks": "a small firm brown or pink bump, often with a paler centre, that dimples when pinched",
-           "treatment": "No treatment is needed; it often stays the same for years. A doctor can cut it out if it is painful, though that leaves a small scar.",
+           "treatment": "Usually no treatment is needed; it often stays the same for years. A doctor can remove it if it is painful.",
            "steps": ["Take care when shaving over it, as nicking it can make it sore.",
-                     "Keep an eye on it, and it is a good idea to have it checked if it grows quickly or changes colour."]},
-    "vasc": {"level": "selfcare", "headline": "No need to see a doctor unless it bleeds often",
+                     "Keep an eye on its size and colour over time."]},
+    "vasc": {"level": "selfcare", "headline": MONITOR,
              "looks": "a bright red, purple or dark red spot made of tiny blood vessels",
-             "treatment": "No treatment is needed. A doctor can remove it with a laser or by freezing if it bleeds often or you don't like how it looks.",
-             "steps": ["If it bleeds after a knock, press on it with a clean cloth for 10 minutes.",
-                       "It is a good idea to have it checked if it grows quickly or bleeds without being injured."]},
+             "treatment": "Usually no treatment is needed. A doctor can remove it with a laser or by freezing if it bleeds often or you would like it gone.",
+             "steps": ["If it bleeds after a knock, press on it gently with a clean cloth for 10 minutes.",
+                       "Keep an eye on its size over time."]},
 }
-# Shown with every result: signs that mean seeing a doctor whatever the model says
+
+# Shown with every result: signs worth discussing with a doctor whatever the AI says
 URGENT_SIGNS = [
     "It bleeds, oozes or crusts without being injured.",
     "It grows, or changes shape or colour, over a few weeks.",
