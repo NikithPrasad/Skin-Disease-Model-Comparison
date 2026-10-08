@@ -64,6 +64,11 @@ predictions side by side, plus the full comparison tables and graphs. The traine
 included in `app/models/` (~70 MB total), so nothing needs training and nothing is sent to the
 internet. On a normal laptop CPU, one photo through all four models takes well under a second.
 
+Each result says what the lesion might be (by majority vote), shows where in the photo each model
+looked (Grad-CAM: ignored areas are dimmed), and gives plain advice: how it is usually treated, what to
+do now, and when to see a doctor. Any model saying melanoma, or the models disagreeing, raises the advice
+to "see a doctor". The advice is general information, not a diagnosis.
+
 **Windows (easiest):**
 1. Install Python 3.10+ from python.org (tick "Add python.exe to PATH").
 2. Double-click `setup.bat` once (downloads CPU-only PyTorch, ~200 MB; needs internet this one time).

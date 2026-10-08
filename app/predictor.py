@@ -3,6 +3,7 @@
 Images arrive as bytes, are decoded in memory and discarded after prediction; nothing
 here writes to disk.
 """
+import base64
 import io
 import json
 import sys
@@ -36,45 +37,55 @@ CLASS_INFO = {
 }
 SERIOUS = {"mel", "bcc", "akiec"}
 
-# What to do next, per lesion type. General guidance only (no medicines named), in line with
-# common public-health advice. level: "urgent" (see a doctor soon), "doctor" (book an
-# appointment), "selfcare" (usually harmless; look after it and watch for changes).
+# Plain-language guidance per lesion type. General information only (no medicines named), in line
+# with common public-health advice.
+#   level      "urgent" (see a doctor soon), "doctor" (book an appointment), "selfcare" (usually harmless)
+#   headline   the one-line answer to "what should I do?"
+#   looks      what this condition typically looks like (general signs, not read from the photo)
+#   treatment  how it is usually dealt with
+#   steps      what the person can do now
 GUIDANCE = {
-    "mel": {"level": "urgent", "headline": "See a doctor soon, ideally within 2 weeks", "steps": [
-        "Book an appointment with a GP or dermatologist and show them this lesion. Early treatment of melanoma works very well.",
-        "Do not try to remove, cut, burn or treat it at home.",
-        "Take a clear photo now so the doctor can see if it changes.",
-        "Keep it out of the sun and use SPF 30+ sunscreen on exposed skin."]},
-    "bcc": {"level": "doctor", "headline": "Book a doctor's appointment in the next few weeks", "steps": [
-        "Basal cell carcinoma grows slowly and rarely spreads, but it does not go away on its own and needs treatment.",
-        "A doctor can confirm it and remove it, usually with a minor procedure.",
-        "Do not pick at it or try home removal products.",
-        "Protect your skin from the sun: SPF 30+, a hat and shade around midday."]},
-    "akiec": {"level": "doctor", "headline": "Book a doctor's appointment in the next few weeks", "steps": [
-        "Actinic keratosis is caused by sun damage and can slowly turn into skin cancer, so it is worth treating.",
-        "A doctor can treat it simply, for example by freezing it or with a prescribed cream.",
-        "Do not scratch or pick at the scaly surface.",
-        "Use SPF 30+ sunscreen every day on sun-exposed skin to prevent new patches."]},
-    "nv": {"level": "selfcare", "headline": "Usually no treatment needed", "steps": [
-        "Ordinary moles are harmless and don't need treatment.",
-        "Check it once a month with the ABCDE rule: Asymmetry, uneven Border, more than one Colour, Diameter over 6 mm, or Evolving (changing).",
-        "Take a photo now so you can compare it later.",
-        "Use sunscreen and avoid sunburn and tanning beds, which raise the risk of new moles becoming melanoma."]},
-    "bkl": {"level": "selfcare", "headline": "Usually no treatment needed", "steps": [
-        "Benign keratoses (such as seborrheic keratoses and sun spots) are harmless and very common with age.",
-        "Don't pick or scratch it; it can bleed or get irritated.",
-        "If it itches, a fragrance-free moisturiser can help. A doctor can remove it if it bothers you.",
-        "Use sunscreen to stop sun spots from darkening."]},
-    "df": {"level": "selfcare", "headline": "Usually no treatment needed", "steps": [
-        "Dermatofibromas are harmless firm bumps and often stay the same for years.",
-        "Take care when shaving over it, as nicking it can make it sore.",
-        "A doctor can remove it if it is painful or bothers you, although that leaves a small scar.",
-        "Have it checked if it grows quickly or changes colour."]},
-    "vasc": {"level": "selfcare", "headline": "Usually no treatment needed", "steps": [
-        "Vascular lesions such as cherry angiomas are harmless clusters of blood vessels.",
-        "If it bleeds after a knock, press on it with a clean cloth for 10 minutes.",
-        "A doctor can remove it for cosmetic reasons or if it keeps bleeding.",
-        "Have it checked if it grows quickly or bleeds without being injured."]},
+    "mel": {"level": "urgent", "headline": "Please see a doctor soon, ideally within 2 weeks",
+            "looks": "uneven colours (brown, black, sometimes blue-grey or red), an irregular edge and a lopsided shape",
+            "treatment": "A doctor removes it with a small operation. Caught early, this usually cures it completely.",
+            "steps": ["Book an appointment with a GP or dermatologist and show them this spot.",
+                      "Do not try to remove, cut, burn or treat it at home.",
+                      "Take a clear photo now so the doctor can see if it changes.",
+                      "Keep it out of the sun and use SPF 30+ sunscreen."]},
+    "bcc": {"level": "doctor", "headline": "Book a doctor's appointment in the next few weeks",
+            "looks": "a shiny, pearly or pink bump, sometimes with tiny visible blood vessels or a small sore in the middle",
+            "treatment": "It is usually removed with a minor procedure, or treated with a cream the doctor prescribes. Once treated it rarely comes back.",
+            "steps": ["It grows slowly and rarely spreads, so this is not an emergency, but it won't go away on its own.",
+                      "Don't pick at it or use home removal products.",
+                      "Protect your skin from the sun: SPF 30+, a hat and shade around midday."]},
+    "akiec": {"level": "doctor", "headline": "Book a doctor's appointment in the next few weeks",
+              "looks": "a rough, dry, scaly patch, pink or red, on skin that gets a lot of sun",
+              "treatment": "Most patches clear with a simple treatment from a doctor, such as freezing, a prescribed cream or light therapy.",
+              "steps": ["Treating it stops it from slowly turning into skin cancer.",
+                        "Don't scratch or pick at the scaly surface.",
+                        "Use SPF 30+ sunscreen every day to prevent new patches."]},
+    "nv": {"level": "selfcare", "headline": "No need to see a doctor unless it changes",
+           "looks": "an evenly coloured brown spot with a smooth, regular edge",
+           "treatment": "No treatment is needed; ordinary moles are harmless. A doctor can remove one if it bothers you.",
+           "steps": ["Check it once a month with the ABCDE rule: Asymmetry, uneven Border, several Colours, Diameter over 6 mm, or Evolving (changing).",
+                     "Take a photo now so you can compare it later.",
+                     "Use sunscreen and avoid sunburn and tanning beds."]},
+    "bkl": {"level": "selfcare", "headline": "No need to see a doctor unless it changes",
+            "looks": "a waxy, 'stuck-on' looking light or dark brown spot, often with a slightly rough surface",
+            "treatment": "No treatment is needed. If it itches or catches on clothing, a doctor can freeze it off quickly.",
+            "steps": ["Don't pick or scratch it; it can bleed or get irritated.",
+                      "If it itches, a fragrance-free moisturiser can help.",
+                      "Use sunscreen to stop sun spots from getting darker."]},
+    "df": {"level": "selfcare", "headline": "No need to see a doctor unless it changes",
+           "looks": "a small firm brown or pink bump, often with a paler centre, that dimples when pinched",
+           "treatment": "No treatment is needed; it often stays the same for years. A doctor can cut it out if it is painful, though that leaves a small scar.",
+           "steps": ["Take care when shaving over it, as nicking it can make it sore.",
+                     "Keep an eye on it and get it checked if it grows quickly or changes colour."]},
+    "vasc": {"level": "selfcare", "headline": "No need to see a doctor unless it bleeds often",
+             "looks": "a bright red, purple or dark red spot made of tiny blood vessels",
+             "treatment": "No treatment is needed. A doctor can remove it with a laser or by freezing if it bleeds often or you don't like how it looks.",
+             "steps": ["If it bleeds after a knock, press on it with a clean cloth for 10 minutes.",
+                       "Get it checked if it grows quickly or bleeds without being injured."]},
 }
 # Shown with every result: signs that mean seeing a doctor whatever the model says
 URGENT_SIGNS = [
@@ -89,18 +100,36 @@ class InvalidImage(Exception):
     pass
 
 
-def preprocess(image_bytes):
-    """Same pipeline as training: RGB -> 256x256 bicubic -> 224x224 antialiased -> ImageNet normalise."""
+def load_image(image_bytes):
+    """Decode in memory and resize to 256x256, as in training."""
     try:
         with warnings.catch_warnings():
             warnings.simplefilter("error", Image.DecompressionBombWarning)
             with Image.open(io.BytesIO(image_bytes)) as im:
-                img = im.convert("RGB").resize((CACHE_SIZE, CACHE_SIZE), Image.BICUBIC)
+                return im.convert("RGB").resize((CACHE_SIZE, CACHE_SIZE), Image.BICUBIC)
     except (OSError, ValueError, Image.DecompressionBombError, Image.DecompressionBombWarning) as e:
         raise InvalidImage(str(e)) from None
+
+
+def to_input(img):
+    """256x256 RGB -> 224x224 antialiased -> ImageNet normalise (as in training)."""
     x = torch.from_numpy(np.asarray(img).copy()).permute(2, 0, 1).float().div(255).unsqueeze(0)
     x = F.interpolate(x, size=(IMG, IMG), mode="bilinear", antialias=True, align_corners=False)
     return (x - MEAN) / STD
+
+
+def preprocess(image_bytes):
+    return to_input(load_image(image_bytes))
+
+
+def attention_image(img, cam):
+    """Photo with the areas the model ignored dimmed, as an in-memory JPEG data URL."""
+    weight = Image.fromarray(np.uint8(cam * 255)).resize(img.size, Image.BICUBIC)
+    w = np.asarray(weight, dtype=np.float32)[..., None] / 255
+    shown = np.asarray(img, dtype=np.float32) * (0.18 + 0.82 * w)  # dim, never black out, the rest
+    buf = io.BytesIO()
+    Image.fromarray(np.uint8(shown.clip(0, 255))).save(buf, "JPEG", quality=85)
+    return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()
 
 
 class Predictor:
@@ -112,26 +141,46 @@ class Predictor:
             model = build_model(m["id"], pretrained=False)
             state = torch.load(models_dir / f"{m['id']}.pt", map_location="cpu", weights_only=True)
             model.load_state_dict({k: v.float() if v.is_floating_point() else v for k, v in state.items()})
-            self.models[m["id"]] = model.eval().to(device)
+            self.models[m["id"]] = model.eval().to(device).requires_grad_(False)
         self.lock = threading.Lock()  # one prediction at a time keeps memory use flat
         with torch.no_grad():  # warm-up so the first real request is not slow
             dummy = torch.zeros(1, 3, IMG, IMG, device=device)
             for model in self.models.values():
                 model(dummy)
 
-    @torch.no_grad()
     def predict(self, image_bytes):
-        x = preprocess(image_bytes).to(self.device)
+        img = load_image(image_bytes)
+        x = to_input(img).to(self.device)
         results = []
         with self.lock:
             for m in self.meta["models"]:
+                model = self.models[m["id"]]
                 t = time.perf_counter()
-                probs = self.models[m["id"]](x).softmax(1)[0].tolist()
+                # Grad-CAM (see the detection site): gradient of the top class score with
+                # respect to the last feature map; only the classifier head needs a backward pass.
+                body, head = split(model)
+                with torch.no_grad():
+                    feats = body(x)
+                feats.requires_grad_(True)
+                logits = head(feats)
+                probs = logits.softmax(1)[0].detach().tolist()
+                top = max(range(len(CLASSES)), key=lambda i: probs[i])
+                logits[0, top].backward()
+                cam = F.relu((feats.grad.mean((2, 3), keepdim=True) * feats).sum(1))[0].detach()
+                cam = (cam / cam.max()).cpu().numpy() if cam.max() > 0 else np.ones(cam.shape, np.float32)
                 ms = (time.perf_counter() - t) * 1000
                 order = sorted(range(len(CLASSES)), key=lambda i: -probs[i])  # 7 classes: sorting is trivial
                 results.append({
                     "model": m["id"], "name": m["name"], "ms": round(ms, 1), "top": CLASSES[order[0]],
                     "probs": [{"code": CLASSES[i], "p": round(probs[i], 4)} for i in order],
+                    "attention": attention_image(img, cam),
                 })
         del x
         return results
+
+
+def split(model):
+    """(feature extractor, classifier head) for Grad-CAM: timm models and the custom CNN."""
+    if hasattr(model, "forward_features"):
+        return model.forward_features, model.forward_head
+    return model.features, model.head

@@ -254,7 +254,7 @@ class GuidanceTests(unittest.TestCase):
         self.assertEqual(set(GUIDANCE), set(CLASSES))
         for code, g in GUIDANCE.items():
             self.assertIn(g["level"], {"urgent", "doctor", "selfcare"}, code)
-            self.assertTrue(g["headline"] and len(g["steps"]) >= 3, code)
+            self.assertTrue(g["headline"] and g["looks"] and g["treatment"] and len(g["steps"]) >= 2, code)
         self.assertEqual(GUIDANCE["mel"]["level"], "urgent")  # melanoma always means see a doctor
         self.assertTrue(URGENT_SIGNS)
 
@@ -276,6 +276,7 @@ class RealModelTests(ServerTests):
         self.assertEqual(len(data["results"]), 4)
         for r in data["results"]:
             self.assertAlmostEqual(sum(p["p"] for p in r["probs"]), 1.0, places=2)
+            self.assertTrue(r["attention"].startswith("data:image/jpeg;base64,"))  # Grad-CAM image, in memory only
 
 
 if __name__ == "__main__":

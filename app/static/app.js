@@ -176,6 +176,7 @@ function clearPhoto() {
   $("truth").textContent = ""; $("error").hidden = true;
   $("verdict").hidden = true;
   $("care").hidden = true;
+  $("seen").hidden = true;
   placeholders(false);
 }
 
@@ -190,6 +191,7 @@ async function analyse(blob, truth) {
   $("busy").hidden = false; $("clear").hidden = false;
   $("verdict").hidden = true;
   $("care").hidden = true;
+  $("seen").hidden = true;
   placeholders(true);
   $("truth").textContent = "";
   if (truth) $("truth").append("True diagnosis: ", el("b", { text: className(truth) }));
@@ -209,6 +211,9 @@ async function analyse(blob, truth) {
 
 function showError(msg) { $("error").textContent = msg; $("error").hidden = false; }
 
+// The whole answer, in plain language: what it might be, where each model looked, how it is dealt
+// with, and when to see a doctor. The majority answer decides the advice, but any model saying
+// melanoma, or the models disagreeing, raises it to "see a doctor": missing a cancer is the costly mistake.
 function render(results, truth) {
   // Majority vote; ties go to the class with the higher total probability across models
   const votes = {}, mass = {};
@@ -217,23 +222,58 @@ function render(results, truth) {
     for (const p of r.probs) mass[p.code] = (mass[p.code] || 0) + p.p;
   }
   const [winner, n] = Object.entries(votes).sort((a, b) => b[1] - a[1] || mass[b[0]] - mass[a[0]])[0];
-  const info = state.info.classes[winner];
-  const melVotes = votes.mel || 0, disagree = n < 3;
-  // Never call a lesion "harmless" while the advice says to see a doctor
-  const tag = info.serious ? ["warn", "Can be serious"] : (melVotes || disagree) ? ["warn", "Get it checked"] : ["ok", "Usually harmless"];
+  const m = state.info, info = m.classes[winner], care = info.care, total = results.length;
+  const melVotes = votes.mel || 0;
+  let level = care.level, headline = care.headline, why = "", steps = care.steps, treatment = care.treatment;
+  if (melVotes && winner !== "mel") {
+    level = "urgent"; headline = "Please see a doctor soon: melanoma can't be ruled out";
+    why = `Most models say ${info.name.toLowerCase()}, but ${melVotes} of ${total} ${melVotes === 1 ? "thinks" : "think"} this could be a melanoma, so it is worth having checked.`;
+    steps = m.classes.mel.care.steps; treatment = "If it turns out to be a melanoma: " + m.classes.mel.care.treatment;
+  } else if (level === "selfcare" && n < 3) {
+    level = "doctor"; headline = "Have a doctor take a look";
+    why = "The models disagree about this photo, so a doctor's opinion is the safe next step.";
+  }
+  const tag = level === "selfcare" ? ["ok", "Usually harmless"] : info.serious ? ["warn", "Can be serious"] : ["warn", "Get it checked"];
 
-  let sub = n === results.length ? "All four models agree." : `${n} of ${results.length} models agree.`;
-  if (truth) sub += truth === winner ? " This matches the true diagnosis." : ` The true diagnosis is ${className(truth)}.`;
+  // 1. What it might be
+  const agree = n === total ? "All four models think so." : `${n} of ${total} models think so.`;
   const v = $("verdict");
-  v.replaceChildren(
-    el("div", { class: "label", text: "Most models say" }),
+  v.replaceChildren(...[
+    el("div", { class: "label", text: "This might be" }),
     el("div", { class: "big" }, info.name, el("span", { class: "tag " + tag[0], text: tag[1] })),
-    el("div", { class: "sub", text: sub }),
     el("p", { class: "about", text: info.about }),
-  );
+    el("p", { class: "sub", text: agree }),
+    truth && el("p", { class: "sub", text: truth === winner ? "This matches the true diagnosis of the sample." : `The true diagnosis of this sample is ${className(truth)}.` }),
+  ].filter(Boolean));
   v.hidden = false;
-  renderCare(winner, n, melVotes, results.length);
 
+  // 2. Where each model looked
+  $("seen").replaceChildren(
+    el("div", { class: "seen-grid" }, ...results.map((r) => el("figure", { class: "seen-img" },
+      el("img", { src: r.attention, alt: `Where ${r.name} looked` }),
+      el("figcaption", {}, swatch(r.model), ` ${r.name}: ${className(r.top).toLowerCase()}`)))),
+    el("div", {},
+      el("h3", { text: "What the models are looking at" }),
+      el("p", { text: "Bright areas are the parts of the photo that most influenced each model's answer; dimmed areas were ignored. A model looking away from the spot is less trustworthy." }),
+      el("h3", { text: `What ${info.name.toLowerCase()} usually looks like` }),
+      el("p", { text: `Typically ${care.looks}. These are general signs; only a doctor can confirm what this is.` })));
+  $("seen").hidden = false;
+
+  // 3. What to do
+  $("care").replaceChildren(
+    el("div", { class: "care " + level }, ...[
+      el("h3", { text: headline }),
+      why && el("p", { class: "why", text: why }),
+      el("h4", { text: "How it is usually treated" }),
+      el("p", { class: "why", text: treatment }),
+      el("h4", { text: "What you can do now" }),
+      el("ol", {}, ...steps.map((s) => el("li", { text: s }))),
+    ].filter(Boolean)),
+    el("div", { class: "signs" }, el("h3", { text: "See a doctor straight away if" }),
+      el("ul", {}, ...m.urgent_signs.map((s) => el("li", { text: s })))));
+  $("care").hidden = false;
+
+  // 4. Each model's full answer
   $("models").replaceChildren(...results.map((r, i) => {
     const bars = r.probs.map((p) => {
       const fill = el("span", { class: "fill" });
@@ -251,27 +291,6 @@ function render(results, truth) {
     card.style.setProperty("--i", i);
     return card;
   }));
-}
-
-// What to do next. The majority answer decides the advice, but any model saying melanoma, or the
-// models disagreeing, pushes it up to "see a doctor", because missing a cancer is the costly mistake.
-function renderCare(winner, n, melVotes, total) {
-  const m = state.info, care = m.classes[winner].care;
-  let level = care.level, headline = care.headline, why = "", steps = care.steps;
-  if (melVotes && winner !== "mel") {
-    level = "urgent"; headline = "See a doctor soon: melanoma can't be ruled out";
-    why = `${melVotes} of ${total} models ${melVotes === 1 ? "thinks" : "think"} this could be a melanoma, so it is worth having checked.`;
-    steps = m.classes.mel.care.steps;
-  } else if (level === "selfcare" && n < 3) {
-    level = "doctor"; headline = "Have a doctor take a look";
-    why = "The models disagree about this photo, so a doctor's opinion is the safe next step. Until then:";
-  }
-  $("care").replaceChildren(
-    el("div", { class: "care " + level }, el("h3", { text: headline }), why && el("p", { class: "why", text: why }),
-      el("ol", {}, ...steps.map((s) => el("li", { text: s })))),
-    el("div", { class: "signs" }, el("h3", { text: "See a doctor straight away if" }),
-      el("ul", {}, ...m.urgent_signs.map((s) => el("li", { text: s })))));
-  $("care").hidden = false;
 }
 
 // ---------- comparison table ----------
