@@ -1,0 +1,4 @@
+# Install PyTorch (CPU build) first:  pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+timm
+pillow
+numpy

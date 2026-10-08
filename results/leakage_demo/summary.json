@@ -1,0 +1,25 @@
+{
+ "model": "mobilenetv3",
+ "seed": 0,
+ "test_images_with_lesion_seen_in_training": 0.3587824351297405,
+ "split_by_image": {
+  "own_test_set": {
+   "macro_f1": 0.7349680227748404,
+   "accuracy": 0.8348303393213573
+  },
+  "external_test_set": {
+   "macro_f1": 0.6553968864620602,
+   "accuracy": 0.7677035076108537
+  }
+ },
+ "split_by_lesion": {
+  "own_test_set": {
+   "macro_f1": 0.679236445522025,
+   "accuracy": 0.8283433133732535
+  },
+  "external_test_set": {
+   "macro_f1": 0.6790340972027413,
+   "accuracy": 0.7882197220383852
+  }
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "test": {
+  "macro_f1": 0.1145419602818706,
+  "balanced_acc": 0.14285714285714285,
+  "accuracy": 0.6691616766467066,
+  "macro_precision": 0.0955945252352438,
+  "macro_recall": 0.14285714285714285,
+  "weighted_f1": 0.5365296313203191,
+  "macro_auc": 0.5,
+  "melanoma_recall": 0.0
+ },
+ "external": {
+  "macro_f1": 0.10724620563396917,
+  "balanced_acc": 0.14285714285714285,
+  "accuracy": 0.600926538716082,
+  "macro_precision": 0.08584664838801172,
+  "macro_recall": 0.14285714285714285,
+  "weighted_f1": 0.45112963799437994,
+  "macro_auc": 0.5,
+  "melanoma_recall": 0.0
+ }
+}

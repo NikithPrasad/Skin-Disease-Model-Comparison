@@ -1,0 +1,171 @@
+{
+ "models": [
+  {
+   "id": "cnn",
+   "name": "CNN (from scratch)",
+   "seed": 2,
+   "file_mb": 4.7,
+   "params_millions": 2.35,
+   "gflops": 1.18,
+   "cpu_latency_ms": 6.3,
+   "test_macro_f1": [
+    0.483,
+    0.031
+   ],
+   "test_balanced_acc": [
+    0.499,
+    0.053
+   ],
+   "test_accuracy": [
+    0.738,
+    0.026
+   ],
+   "test_melanoma_recall": [
+    0.482,
+    0.137
+   ],
+   "ext_macro_f1": [
+    0.462,
+    0.077
+   ],
+   "ext_accuracy": [
+    0.68,
+    0.036
+   ]
+  },
+  {
+   "id": "resnet50",
+   "name": "ResNet50",
+   "seed": 2,
+   "file_mb": 47.2,
+   "params_millions": 23.52,
+   "gflops": 8.17,
+   "cpu_latency_ms": 44.7,
+   "test_macro_f1": [
+    0.718,
+    0.027
+   ],
+   "test_balanced_acc": [
+    0.701,
+    0.02
+   ],
+   "test_accuracy": [
+    0.858,
+    0.005
+   ],
+   "test_melanoma_recall": [
+    0.474,
+    0.07
+   ],
+   "ext_macro_f1": [
+    0.724,
+    0.014
+   ],
+   "ext_accuracy": [
+    0.828,
+    0.006
+   ]
+  },
+  {
+   "id": "efficientnet_b0",
+   "name": "EfficientNet-B0",
+   "seed": 2,
+   "file_mb": 8.2,
+   "params_millions": 4.02,
+   "gflops": 0.77,
+   "cpu_latency_ms": 28.1,
+   "test_macro_f1": [
+    0.7,
+    0.036
+   ],
+   "test_balanced_acc": [
+    0.704,
+    0.036
+   ],
+   "test_accuracy": [
+    0.836,
+    0.019
+   ],
+   "test_melanoma_recall": [
+    0.58,
+    0.068
+   ],
+   "ext_macro_f1": [
+    0.695,
+    0.013
+   ],
+   "ext_accuracy": [
+    0.806,
+    0.01
+   ]
+  },
+  {
+   "id": "mobilenetv3",
+   "name": "MobileNetV3",
+   "seed": 2,
+   "file_mb": 8.6,
+   "params_millions": 4.21,
+   "gflops": 0.43,
+   "cpu_latency_ms": 17.2,
+   "test_macro_f1": [
+    0.672,
+    0.011
+   ],
+   "test_balanced_acc": [
+    0.672,
+    0.013
+   ],
+   "test_accuracy": [
+    0.833,
+    0.004
+   ],
+   "test_melanoma_recall": [
+    0.518,
+    0.027
+   ],
+   "ext_macro_f1": [
+    0.677,
+    0.004
+   ],
+   "ext_accuracy": [
+    0.792,
+    0.008
+   ]
+  }
+ ],
+ "seeds": 3,
+ "examples": {
+  "akiec": "ISIC_0025831",
+  "bcc": "ISIC_0024949",
+  "bkl": "ISIC_0025387",
+  "df": "ISIC_0031443",
+  "mel": "ISIC_0024967",
+  "nv": "ISIC_0026515",
+  "vasc": "ISIC_0024669"
+ },
+ "leakage_demo": {
+  "model": "mobilenetv3",
+  "seed": 0,
+  "test_images_with_lesion_seen_in_training": 0.3587824351297405,
+  "split_by_image": {
+   "own_test_set": {
+    "macro_f1": 0.7349680227748404,
+    "accuracy": 0.8348303393213573
+   },
+   "external_test_set": {
+    "macro_f1": 0.6553968864620602,
+    "accuracy": 0.7677035076108537
+   }
+  },
+  "split_by_lesion": {
+   "own_test_set": {
+    "macro_f1": 0.679236445522025,
+    "accuracy": 0.8283433133732535
+   },
+   "external_test_set": {
+    "macro_f1": 0.6790340972027413,
+    "accuracy": 0.7882197220383852
+   }
+  }
+ }
+}

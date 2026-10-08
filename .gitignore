@@ -1,0 +1,14 @@
+# Dataset (3 GB) - download from Harvard Dataverse, see README
+data/
+# Training checkpoints and predictions (the app uses the copies in app/models/)
+results/runs/
+.cache/
+.venv/
+__pycache__/
+*.pyc
+# User accounts database - personal data, never commit
+app/data/
+# Local tool config
+.claude/
+# Leakage-demo checkpoint (results are kept in summary.json)
+results/leakage_demo/*/best.pt
