@@ -39,26 +39,26 @@ SERIOUS = {"mel", "bcc", "akiec"}
 
 # Plain-language guidance per lesion type. General information only (no medicines named), in line
 # with common public-health advice.
-#   level      "urgent" (see a doctor soon), "doctor" (book an appointment), "selfcare" (usually harmless)
+#   level      "urgent" (please talk to a doctor), "doctor" (worth talking to a doctor), "selfcare" (usually harmless)
 #   headline   the one-line answer to "what should I do?"
 #   looks      what this condition typically looks like (general signs, not read from the photo)
 #   treatment  how it is usually dealt with
 #   steps      what the person can do now
 GUIDANCE = {
-    "mel": {"level": "urgent", "headline": "Please see a doctor soon, ideally within 2 weeks",
+    "mel": {"level": "urgent", "headline": "This could be a melanoma, so we'd kindly ask you to talk to a doctor",
             "looks": "uneven colours (brown, black, sometimes blue-grey or red), an irregular edge and a lopsided shape",
             "treatment": "A doctor removes it with a small operation. Caught early, this usually cures it completely.",
-            "steps": ["Book an appointment with a GP or dermatologist and show them this spot.",
-                      "Do not try to remove, cut, burn or treat it at home.",
+            "steps": ["When you can, please book an appointment with a GP or dermatologist and show them this spot. It's best not to wait more than a couple of weeks.",
+                      "Please don't try to remove or treat it at home.",
                       "Take a clear photo now so the doctor can see if it changes.",
                       "Keep it out of the sun and use SPF 30+ sunscreen."]},
-    "bcc": {"level": "doctor", "headline": "Book a doctor's appointment in the next few weeks",
+    "bcc": {"level": "doctor", "headline": "This may need treatment, so we'd suggest talking to a doctor when you can",
             "looks": "a shiny, pearly or pink bump, sometimes with tiny visible blood vessels or a small sore in the middle",
             "treatment": "It is usually removed with a minor procedure, or treated with a cream the doctor prescribes. Once treated it rarely comes back.",
             "steps": ["It grows slowly and rarely spreads, so this is not an emergency, but it won't go away on its own.",
                       "Don't pick at it or use home removal products.",
                       "Protect your skin from the sun: SPF 30+, a hat and shade around midday."]},
-    "akiec": {"level": "doctor", "headline": "Book a doctor's appointment in the next few weeks",
+    "akiec": {"level": "doctor", "headline": "This may need treatment, so we'd suggest talking to a doctor when you can",
               "looks": "a rough, dry, scaly patch, pink or red, on skin that gets a lot of sun",
               "treatment": "Most patches clear with a simple treatment from a doctor, such as freezing, a prescribed cream or light therapy.",
               "steps": ["Treating it stops it from slowly turning into skin cancer.",
@@ -80,12 +80,12 @@ GUIDANCE = {
            "looks": "a small firm brown or pink bump, often with a paler centre, that dimples when pinched",
            "treatment": "No treatment is needed; it often stays the same for years. A doctor can cut it out if it is painful, though that leaves a small scar.",
            "steps": ["Take care when shaving over it, as nicking it can make it sore.",
-                     "Keep an eye on it and get it checked if it grows quickly or changes colour."]},
+                     "Keep an eye on it, and it is a good idea to have it checked if it grows quickly or changes colour."]},
     "vasc": {"level": "selfcare", "headline": "No need to see a doctor unless it bleeds often",
              "looks": "a bright red, purple or dark red spot made of tiny blood vessels",
              "treatment": "No treatment is needed. A doctor can remove it with a laser or by freezing if it bleeds often or you don't like how it looks.",
              "steps": ["If it bleeds after a knock, press on it with a clean cloth for 10 minutes.",
-                       "Get it checked if it grows quickly or bleeds without being injured."]},
+                       "It is a good idea to have it checked if it grows quickly or bleeds without being injured."]},
 }
 # Shown with every result: signs that mean seeing a doctor whatever the model says
 URGENT_SIGNS = [

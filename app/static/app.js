@@ -226,14 +226,14 @@ function render(results, truth) {
   const melVotes = votes.mel || 0;
   let level = care.level, headline = care.headline, why = "", steps = care.steps, treatment = care.treatment;
   if (melVotes && winner !== "mel") {
-    level = "urgent"; headline = "Please see a doctor soon: melanoma can't be ruled out";
-    why = `Most models say ${info.name.toLowerCase()}, but ${melVotes} of ${total} ${melVotes === 1 ? "thinks" : "think"} this could be a melanoma, so it is worth having checked.`;
+    level = "urgent"; headline = "A melanoma can't be fully ruled out, so we'd kindly ask you to talk to a doctor";
+    why = `Most models say ${info.name.toLowerCase()}, but ${melVotes} of ${total} ${melVotes === 1 ? "thinks" : "think"} it could be a melanoma. Just to be safe, we'd recommend having a doctor look at it.`;
     steps = m.classes.mel.care.steps; treatment = "If it turns out to be a melanoma: " + m.classes.mel.care.treatment;
   } else if (level === "selfcare" && n < 3) {
-    level = "doctor"; headline = "Have a doctor take a look";
-    why = "The models disagree about this photo, so a doctor's opinion is the safe next step.";
+    level = "doctor"; headline = "We're not sure about this one, so we'd suggest asking a doctor";
+    why = "The models don't agree about this photo. A doctor can tell you for sure.";
   }
-  const tag = level === "selfcare" ? ["ok", "Usually harmless"] : info.serious ? ["warn", "Can be serious"] : ["warn", "Get it checked"];
+  const tag = level === "selfcare" ? ["ok", "Usually harmless"] : info.serious ? ["warn", "Worth checking"] : ["warn", "Worth checking"];
 
   // 1. What it might be
   const agree = n === total ? "All four models think so." : `${n} of ${total} models think so.`;
@@ -269,7 +269,7 @@ function render(results, truth) {
       el("h4", { text: "What you can do now" }),
       el("ol", {}, ...steps.map((s) => el("li", { text: s }))),
     ].filter(Boolean)),
-    el("div", { class: "signs" }, el("h3", { text: "See a doctor straight away if" }),
+    el("div", { class: "signs" }, el("h3", { text: "Please talk to a doctor if you notice that" }),
       el("ul", {}, ...m.urgent_signs.map((s) => el("li", { text: s })))));
   $("care").hidden = false;
 
