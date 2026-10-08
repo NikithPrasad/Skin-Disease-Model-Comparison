@@ -81,10 +81,7 @@ class Handler(SimpleHTTPRequestHandler):
         return f"session={token}; HttpOnly; SameSite=Strict; Path=/; Max-Age={max_age}"
 
     def read_body(self, limit):
-        length = int(self.headers.get("Content-Length") or 0)
-        if not 0 < length <= limit:
-            return None
-        return self.rfile.read(length)
+        return self.body if 0 < len(self.body) <= limit else None
 
     def read_json(self):
         body = self.read_body(MAX_JSON)
@@ -110,6 +107,13 @@ class Handler(SimpleHTTPRequestHandler):
         return super().do_GET()
 
     def do_POST(self):
+        length = int(self.headers.get("Content-Length") or 0)
+        if length > MAX_UPLOAD:
+            self.close_connection = True
+            return self.send_json({"error": "Please upload an image under 20 MB."}, 413)
+        # Read the whole body before answering anything: replying early and closing a socket that
+        # still has unread data makes Windows reset the connection instead of delivering the reply.
+        self.body = self.rfile.read(length) if length else b""
         if self.headers.get(CSRF_HEADER) != "fetch":
             return self.send_json({"error": "Bad request."}, 403)
         routes = {
@@ -175,6 +179,7 @@ class Handler(SimpleHTTPRequestHandler):
             return self.send_json({"error": "That file isn't an image this app can read. Try a JPG or PNG."}, 400)
         finally:
             del image  # the photo exists only in memory, only for this request
+            self.body = b""
         return self.send_json({"results": results})
 
 

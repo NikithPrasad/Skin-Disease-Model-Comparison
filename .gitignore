@@ -12,3 +12,5 @@ app/data/
 .claude/
 # Leakage-demo checkpoint (results are kept in summary.json)
 results/leakage_demo/*/best.pt
+# 8-class training runs for the detection site (checkpoints; results are in the site meta.json)
+results/runs_8class/

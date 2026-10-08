@@ -1,0 +1,97 @@
+[efficientnet_b0 s0] ep  1  train_loss 2.485  val_acc 0.726  val_F1 0.488  val_balacc 0.604  (24s)  *best
+[efficientnet_b0 s0] ep  2  train_loss 1.471  val_acc 0.846  val_F1 0.685  val_balacc 0.744  (49s)  *best
+[efficientnet_b0 s0] ep  3  train_loss 1.333  val_acc 0.857  val_F1 0.656  val_balacc 0.690  (74s)
+[efficientnet_b0 s0] ep  4  train_loss 1.257  val_acc 0.872  val_F1 0.711  val_balacc 0.754  (99s)  *best
+[efficientnet_b0 s0] ep  5  train_loss 1.217  val_acc 0.876  val_F1 0.721  val_balacc 0.763  (125s)  *best
+[efficientnet_b0 s0] ep  6  train_loss 1.183  val_acc 0.870  val_F1 0.708  val_balacc 0.724  (152s)
+[efficientnet_b0 s0] ep  7  train_loss 1.138  val_acc 0.873  val_F1 0.745  val_balacc 0.767  (177s)  *best
+[efficientnet_b0 s0] ep  8  train_loss 1.108  val_acc 0.863  val_F1 0.698  val_balacc 0.715  (203s)
+[efficientnet_b0 s0] ep  9  train_loss 1.091  val_acc 0.857  val_F1 0.698  val_balacc 0.710  (229s)
+[efficientnet_b0 s0] ep 10  train_loss 1.069  val_acc 0.872  val_F1 0.735  val_balacc 0.746  (254s)
+[efficientnet_b0 s0] ep 11  train_loss 1.048  val_acc 0.867  val_F1 0.707  val_balacc 0.741  (280s)
+[efficientnet_b0 s0] ep 12  train_loss 1.027  val_acc 0.864  val_F1 0.721  val_balacc 0.737  (305s)
+[efficientnet_b0 s0] ep 13  train_loss 1.021  val_acc 0.864  val_F1 0.699  val_balacc 0.732  (331s)
+[efficientnet_b0 s0] ep 14  train_loss 1.014  val_acc 0.886  val_F1 0.718  val_balacc 0.731  (356s)
+[efficientnet_b0 s0] ep 15  train_loss 0.996  val_acc 0.887  val_F1 0.726  val_balacc 0.721  (382s)
+[efficientnet_b0 s0] ep 16  train_loss 0.987  val_acc 0.888  val_F1 0.743  val_balacc 0.746  (407s)
+[efficientnet_b0 s0] ep 17  train_loss 0.980  val_acc 0.880  val_F1 0.722  val_balacc 0.727  (433s)
+[efficientnet_b0 s0] ep 18  train_loss 0.968  val_acc 0.882  val_F1 0.725  val_balacc 0.723  (458s)
+[efficientnet_b0 s0] ep 19  train_loss 0.966  val_acc 0.879  val_F1 0.725  val_balacc 0.727  (484s)
+[efficientnet_b0 s0] ep 20  train_loss 0.957  val_acc 0.891  val_F1 0.741  val_balacc 0.741  (509s)
+[efficientnet_b0 s0] ep 21  train_loss 0.955  val_acc 0.888  val_F1 0.736  val_balacc 0.737  (535s)
+[efficientnet_b0 s0] ep 22  train_loss 0.952  val_acc 0.886  val_F1 0.740  val_balacc 0.737  (560s)
+[efficientnet_b0 s0] ep 23  train_loss 0.948  val_acc 0.886  val_F1 0.736  val_balacc 0.744  (586s)
+[efficientnet_b0 s0] ep 24  train_loss 0.948  val_acc 0.886  val_F1 0.734  val_balacc 0.739  (611s)
+[efficientnet_b0 s0] ep 25  train_loss 0.946  val_acc 0.890  val_F1 0.741  val_balacc 0.739  (638s)
+[efficientnet_b0 s0] ep 26  train_loss 0.947  val_acc 0.893  val_F1 0.750  val_balacc 0.739  (664s)  *best
+[efficientnet_b0 s0] ep 27  train_loss 0.942  val_acc 0.888  val_F1 0.745  val_balacc 0.742  (691s)
+[efficientnet_b0 s0] ep 28  train_loss 0.943  val_acc 0.891  val_F1 0.754  val_balacc 0.749  (717s)  *best
+[efficientnet_b0 s0] ep 29  train_loss 0.942  val_acc 0.889  val_F1 0.746  val_balacc 0.747  (743s)
+[efficientnet_b0 s0] ep 30  train_loss 0.943  val_acc 0.889  val_F1 0.748  val_balacc 0.748  (769s)
+W1008 17:36:27.298000 30976 site-packages\torch\utils\flop_counter.py:113] triton not found; flop counting will not work for triton kernels
+{
+ "model": "efficientnet_b0",
+ "seed": 0,
+ "num_classes": 8,
+ "epochs": 30,
+ "lr": 0.0005,
+ "best_epoch": 28,
+ "best_val_macro_f1": 0.753561690298408,
+ "train_time_s": 768.8717637062073,
+ "params_millions": 4.017796,
+ "size_mb": 16.346533,
+ "gflops": 0.769089984,
+ "latency_ms_gpu_batch1": 8.410050009842962,
+ "latency_ms_cpu_batch1": 46.90479999408126,
+ "throughput_img_per_s_gpu_batch64": 1937.814913862357
+}
+[efficientnet_b0 s1] ep  1  train_loss 2.480  val_acc 0.748  val_F1 0.512  val_balacc 0.594  (48s)  *best
+[efficientnet_b0 s1] ep  2  train_loss 1.475  val_acc 0.817  val_F1 0.630  val_balacc 0.697  (74s)  *best
+[efficientnet_b0 s1] ep  3  train_loss 1.308  val_acc 0.853  val_F1 0.664  val_balacc 0.700  (101s)  *best
+[efficientnet_b0 s1] ep  4  train_loss 1.247  val_acc 0.860  val_F1 0.679  val_balacc 0.710  (152s)  *best
+[efficientnet_b0 s1] ep  5  train_loss 1.219  val_acc 0.851  val_F1 0.668  val_balacc 0.706  (187s)
+[efficientnet_b0 s1] ep  6  train_loss 1.168  val_acc 0.867  val_F1 0.665  val_balacc 0.676  (228s)
+[efficientnet_b0 s1] ep  7  train_loss 1.135  val_acc 0.859  val_F1 0.679  val_balacc 0.711  (290s)
+[efficientnet_b0 s1] ep  8  train_loss 1.110  val_acc 0.878  val_F1 0.709  val_balacc 0.708  (337s)  *best
+[efficientnet_b0 s1] ep  9  train_loss 1.084  val_acc 0.861  val_F1 0.699  val_balacc 0.737  (380s)
+[efficientnet_b0 s1] ep 10  train_loss 1.067  val_acc 0.872  val_F1 0.721  val_balacc 0.729  (460s)  *best
+[efficientnet_b0 s1] ep 11  train_loss 1.034  val_acc 0.873  val_F1 0.717  val_balacc 0.708  (540s)
+[efficientnet_b0 s1] ep 12  train_loss 1.020  val_acc 0.874  val_F1 0.687  val_balacc 0.688  (582s)
+[efficientnet_b0 s1] ep 13  train_loss 1.013  val_acc 0.868  val_F1 0.722  val_balacc 0.735  (624s)  *best
+[efficientnet_b0 s1] ep 14  train_loss 1.001  val_acc 0.876  val_F1 0.702  val_balacc 0.706  (666s)
+[efficientnet_b0 s1] ep 15  train_loss 0.992  val_acc 0.878  val_F1 0.732  val_balacc 0.728  (708s)  *best
+[efficientnet_b0 s1] ep 16  train_loss 0.983  val_acc 0.886  val_F1 0.735  val_balacc 0.741  (750s)  *best
+[efficientnet_b0 s1] ep 17  train_loss 0.974  val_acc 0.886  val_F1 0.735  val_balacc 0.732  (792s)  *best
+[efficientnet_b0 s1] ep 18  train_loss 0.963  val_acc 0.887  val_F1 0.740  val_balacc 0.753  (833s)  *best
+[efficientnet_b0 s1] ep 19  train_loss 0.963  val_acc 0.885  val_F1 0.747  val_balacc 0.743  (875s)  *best
+[efficientnet_b0 s1] ep 20  train_loss 0.960  val_acc 0.880  val_F1 0.740  val_balacc 0.748  (917s)
+[efficientnet_b0 s1] ep 21  train_loss 0.956  val_acc 0.882  val_F1 0.737  val_balacc 0.726  (958s)
+[efficientnet_b0 s1] ep 22  train_loss 0.950  val_acc 0.892  val_F1 0.748  val_balacc 0.743  (1000s)  *best
+[efficientnet_b0 s1] ep 23  train_loss 0.951  val_acc 0.886  val_F1 0.736  val_balacc 0.732  (1041s)
+[efficientnet_b0 s1] ep 24  train_loss 0.948  val_acc 0.887  val_F1 0.729  val_balacc 0.721  (1083s)
+[efficientnet_b0 s1] ep 25  train_loss 0.944  val_acc 0.883  val_F1 0.736  val_balacc 0.738  (1125s)
+[efficientnet_b0 s1] ep 26  train_loss 0.945  val_acc 0.891  val_F1 0.731  val_balacc 0.728  (1166s)
+[efficientnet_b0 s1] ep 27  train_loss 0.943  val_acc 0.886  val_F1 0.734  val_balacc 0.745  (1208s)
+[efficientnet_b0 s1] ep 28  train_loss 0.944  val_acc 0.886  val_F1 0.738  val_balacc 0.750  (1249s)
+[efficientnet_b0 s1] ep 29  train_loss 0.942  val_acc 0.890  val_F1 0.755  val_balacc 0.755  (1291s)  *best
+[efficientnet_b0 s1] ep 30  train_loss 0.942  val_acc 0.885  val_F1 0.740  val_balacc 0.751  (1332s)
+W1008 17:59:04.281000 31428 site-packages\torch\utils\flop_counter.py:113] triton not found; flop counting will not work for triton kernels
+{
+ "model": "efficientnet_b0",
+ "seed": 1,
+ "num_classes": 8,
+ "epochs": 30,
+ "lr": 0.0005,
+ "best_epoch": 29,
+ "best_val_macro_f1": 0.7549996435434185,
+ "train_time_s": 1332.243468284607,
+ "params_millions": 4.017796,
+ "size_mb": 16.346533,
+ "gflops": 0.769089984,
+ "latency_ms_gpu_batch1": 7.358900009421632,
+ "latency_ms_cpu_batch1": 23.811400023987517,
+ "throughput_img_per_s_gpu_batch64": 1074.2221184128089
+}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[efficientnet_b0 s2] ep  1  train_loss 2.501  val_acc 0.765  val_F1 0.534  val_balacc 0.642  (41s)  *best
+[efficientnet_b0 s2] ep  2  train_loss 1.453  val_acc 0.828  val_F1 0.671  val_balacc 0.743  (81s)  *best

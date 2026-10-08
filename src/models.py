@@ -36,8 +36,8 @@ class SimpleCNN(nn.Module):
         return self.head(self.features(x))
 
 
-def build_model(name, pretrained=True):
+def build_model(name, pretrained=True, num_classes=NUM_CLASSES):
     timm_id, _ = MODELS[name]
     if timm_id is None:
-        return SimpleCNN()
-    return timm.create_model(timm_id, pretrained=pretrained, num_classes=NUM_CLASSES)
+        return SimpleCNN(num_classes)
+    return timm.create_model(timm_id, pretrained=pretrained, num_classes=num_classes)

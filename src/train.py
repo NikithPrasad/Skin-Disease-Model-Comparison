@@ -136,6 +136,7 @@ def main():
     ap.add_argument("--batch-size", type=int, default=64)
     ap.add_argument("--data-dir", type=Path, default=DATA, help="folder with train/val/test arrays")
     ap.add_argument("--runs-dir", type=Path, default=RUNS, help="where to save the run")
+    ap.add_argument("--num-classes", type=int, default=NUM_CLASSES, help="8 for the dataset with healthy skin")
     args = ap.parse_args()
 
     torch.manual_seed(args.seed)
@@ -148,12 +149,12 @@ def main():
     x_val, y_val = load_split("val", args.data_dir)
 
     # Class-weighted loss: rarer classes count more (inverse square-root frequency, mean 1)
-    counts = torch.bincount(y_train, minlength=NUM_CLASSES).float()
+    counts = torch.bincount(y_train, minlength=args.num_classes).float()
     weights = counts.pow(-0.5)
     weights = weights / weights.mean()
     criterion = nn.CrossEntropyLoss(weight=weights.to(device), label_smoothing=0.1)
 
-    model = build_model(args.model).to(device)
+    model = build_model(args.model, num_classes=args.num_classes).to(device)
     lr = MODELS[args.model][1]
     optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=0.05)
     steps_per_epoch = len(x_train) // args.batch_size
@@ -213,6 +214,7 @@ def main():
     info = {
         "model": args.model,
         "seed": args.seed,
+        "num_classes": args.num_classes,
         "epochs": args.epochs,
         "lr": lr,
         "best_epoch": best_epoch,
