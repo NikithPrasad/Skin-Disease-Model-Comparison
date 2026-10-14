@@ -206,6 +206,7 @@ def main():
     manifest = pd.read_csv(DATA / "manifest.csv")
     src = {s: manifest.query("split == @s").source.to_numpy() for s in ["val", "test"]}
     paths = manifest.query("split == 'test'").path.to_numpy()
+    detail = manifest.query("split == 'test'").detail.to_numpy()
     out = {s: run(model, sets[s][0], device) for s in ["val", "test"]}
 
     pv, yv = out["val"], sets["val"][1]
@@ -257,14 +258,21 @@ def main():
     ex_dir = app / "static" / "examples"
     for old in ex_dir.glob("*.jpg"):
         old.unlink()
-    # Some groups have a preferred source: DermNet's herpes category also holds genital (STD) photos,
+    # Some groups have a preferred source. DermNet's herpes category also holds genital (STD) photos,
     # and the healthy faces are stock portraits of real people, so those examples come from close-ups.
-    prefer = {"herpes": {"infections8", "atlas31"}, "healthy": {"msld"}}
+    # The atlas set mixes in ISIC dermoscopy (magnified) images for moles, melanoma, cancers, benign
+    # and vascular lesions; examples should look like ordinary photos, so those come from camera-photo sets.
+    camera = {"dermnet", "fitzpatrick17k"}
+    prefer = {"herpes": {"infections8", "atlas31"}, "healthy": {"msld"},
+              **{k: camera for k in ["mole", "melanoma", "cancer", "benign", "vascular"]}}
     good = (pt.argmax(1) == yt) & (scores["test"] <= ood_t)
     for c, key in enumerate(LABELS):
         cand = np.where(good & (yt == c))[0]
         if key in prefer and np.isin(src["test"][cand], list(prefer[key])).any():
             cand = cand[np.isin(src["test"][cand], list(prefer[key]))]
+        if key == "mole":  # a typical mole, not a faint birthmark
+            typical = detail[cand] == "nevocytic nevus"
+            cand = cand[typical] if typical.any() else cand
         pick = cand[np.argsort(-pt[cand, c])[len(cand) // 4]]
         Image.fromarray(np.asarray(sets["test"][0][pick])).save(ex_dir / f"{key}.jpg", quality=92)
         meta["examples"][key] = Path(paths[pick]).stem[:16]
