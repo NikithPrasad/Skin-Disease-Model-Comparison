@@ -40,12 +40,17 @@ def to_input(x_uint8, device):
     return x_uint8.to(device, non_blocking=True).permute(0, 3, 1, 2).float().div_(255).contiguous()
 
 
-def augment(x):
+def augment(x, clinical=False):
     """GPU augmentation. Dermoscopy images have no natural orientation, so use full
-    rotations and flips, plus mild zoom/shift and colour jitter."""
+    rotations and flips, plus mild zoom/shift and colour jitter. Ordinary camera photos do
+    have an "up" (faces, hands, scalps), so for them rotations stay within +-20 degrees."""
     n, dev = x.shape[0], x.device
-    angle = torch.rand(n, device=dev) * 2 * math.pi
-    scale = torch.empty(n, device=dev).uniform_(0.75, 1.0)  # <1 zooms in (crops)
+    if clinical:
+        angle = (torch.rand(n, device=dev) * 2 - 1) * math.radians(20)
+        scale = torch.empty(n, device=dev).uniform_(0.6, 1.0)
+    else:
+        angle = torch.rand(n, device=dev) * 2 * math.pi
+        scale = torch.empty(n, device=dev).uniform_(0.75, 1.0)  # <1 zooms in (crops)
     flip = torch.where(torch.rand(n, device=dev) < 0.5, -1.0, 1.0)
     shift = torch.empty(n, 2, device=dev).uniform_(-0.1, 0.1)
     cos, sin = torch.cos(angle) * scale, torch.sin(angle) * scale
@@ -137,6 +142,8 @@ def main():
     ap.add_argument("--data-dir", type=Path, default=DATA, help="folder with train/val/test arrays")
     ap.add_argument("--runs-dir", type=Path, default=RUNS, help="where to save the run")
     ap.add_argument("--num-classes", type=int, default=NUM_CLASSES, help="8 for the dataset with healthy skin")
+    ap.add_argument("--clinical", action="store_true",
+                    help="camera-photo dataset: upright augmentation, no HAM10000 external test")
     args = ap.parse_args()
 
     torch.manual_seed(args.seed)
@@ -171,7 +178,7 @@ def main():
         loss_sum = 0.0
         for i in range(steps_per_epoch):
             idx = perm[i * args.batch_size:(i + 1) * args.batch_size]
-            x = normalize(augment(to_input(x_train[idx], device)))
+            x = normalize(augment(to_input(x_train[idx], device), args.clinical))
             y = y_train[idx].to(device, non_blocking=True)
             with torch.autocast("cuda", dtype=torch.bfloat16):
                 loss = criterion(model(x), y)
@@ -206,7 +213,7 @@ def main():
 
     model.load_state_dict(torch.load(run_dir / "best.pt", weights_only=True))
     best_epoch = max(history, key=lambda r: r["val_macro_f1"])["epoch"]
-    for split in ["test", "external"]:
+    for split in ["test"] if args.clinical else ["test", "external"]:
         x, y = load_split(split, args.data_dir if split == "test" else DATA)  # external set never changes
         np.save(run_dir / f"{split}_probs.npy", predict(model, x, device))
         np.save(run_dir / f"{split}_labels.npy", y.numpy())

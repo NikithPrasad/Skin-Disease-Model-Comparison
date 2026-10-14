@@ -23,6 +23,28 @@ the scratch CNN shows how much transfer learning helps. Full tables and figures:
 [results/RESULTS.md](results/RESULTS.md). Interpretation, limitations and a review of the
 original plan: [FINDINGS.md](FINDINGS.md).
 
+## Everyday clinical photos (24 groups)
+
+HAM10000 only has dermoscopy close-ups of 7 lesion types. Our teacher's example photos are ordinary
+clinical photos of many conditions (leprosy, pellagra, acne, ringworm, shingles, vitiligo, nail and hair
+problems, moles, melanoma, ...), so EfficientNet-B0, the model chosen above, was also trained on a merged
+clinical-photo dataset: about 36,000 photos from DermNet, Fitzpatrick17k, a dermatology atlas with
+leprosy photos, a skin-infection set and two healthy-skin sets, sorted into 23 condition groups + healthy
+skin (`src/clinical_prepare.py`). Duplicates across the datasets were removed with image-feature
+similarity, and photos of the same patient never appear in both training and test.
+
+<!-- clinical:start -->
+| Model | Macro F1 | Accuracy | Top-3 accuracy | Balanced acc. | Melanoma recall | Params (M) | CPU ms / image | Train time (min) | Seeds |
+|---|---|---|---|---|---|---|---|---|---|
+| EfficientNet-B0 | 0.629 | 0.649 | 0.794 | 0.647 | 0.625 | 4.0 | 20.9 | 49 | 1 |
+<!-- clinical:end -->
+
+Details and per-group recall: [results/CLINICAL_RESULTS.md](results/CLINICAL_RESULTS.md). This model
+powers [SkinCheck](https://github.com/NikithPrasad/Skin-Disease-Detection). The other three architectures
+can be trained on the same data with `python src/clinical_run_all.py --models resnet50 mobilenetv3 cnn`. Reproduce with
+`python src/clinical_run_all.py` (datasets downloaded from Kaggle into `../datasets`, see the docstring
+of `src/clinical_prepare.py`), then `python src/clinical_report.py` and `python src/export_clinical_model.py`.
+
 ## Classes
 
 | Code | Name | Images |

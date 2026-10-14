@@ -14,3 +14,4 @@ app/data/
 results/leakage_demo/*/best.pt
 # 8-class training runs for the detection site (checkpoints; results are in the site meta.json)
 results/runs_8class/
+results/runs_clinical/
