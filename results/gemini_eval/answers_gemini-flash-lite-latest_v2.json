@@ -1,0 +1,1298 @@
+{
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\b69665c68266e8b4dbf2b87edca0afd5.jpg": {
+"group": "acne",
+"condition": "rhinophyma",
+"description": "The image shows significant enlargement, thickening, and prominent pores on the nose, typically associated with advanced rosacea known as rhinophyma. This condition causes the skin and oil glands on the nose to grow over time.",
+"harm": "moderate",
+"harm_reason": "While generally benign, rhinophyma can worsen progressively, cause permanent changes to the nose shape, and may require medical or surgical management.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\2fb222cda6682a3826fc642af2131532.jpg": {
+"group": "lupus",
+"condition": "Cutaneous lupus erythematosus",
+"description": "This image shows prominent red, slightly raised patches distributed across the cheek and forehead area. These changes are characteristic of chronic skin manifestations associated with connective-tissue conditions like lupus, where sun exposure can trigger flare-ups.",
+"harm": "moderate",
+"harm_reason": "While not immediately life-threatening, it requires medical management to prevent scarring, control inflammation, and monitor for underlying systemic involvement.",
+"confidence": 0.8,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\6e486f78c8ce8742922a43490b24826a.jpg": {
+"group": "acne",
+"condition": "Rosacea",
+"description": "The image shows persistent redness, small bumps, and visible blood vessels across the nose and cheeks of an adult face. Rosacea is a common, chronic inflammatory skin condition that typically affects the central face and can flare up periodically due to various triggers.",
+"harm": "mild",
+"harm_reason": "It is generally an uncomfortable and chronic condition that is not life-threatening but often requires medical management to control symptoms.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Cellulitis Impetigo and other Bacterial Infections\\atypical-mycobacterium-6.jpg": {
+"group": "eczema",
+"condition": "pompholyx eczema",
+"description": "This photograph displays clusters of small, fluid-filled blisters and red, irritated patches on the back of the hand and fingers. This type of reaction often presents as intensely itchy bumps that can eventually dry out, peel, or become scaly.",
+"harm": "mild",
+"harm_reason": "It can be uncomfortable and prone to secondary infection if scratched, but it is not life-threatening and can be managed with proper care.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Cellulitis Impetigo and other Bacterial Infections\\Cellulitis-5.jpg": {
+"group": "vascular",
+"condition": "Stasis dermatitis",
+"description": "The image shows a large area of reddish-purple discoloration and inflammation on the lower leg, typical of changes related to increased pressure in the veins. This condition, known as stasis dermatitis, occurs when blood flow in the lower leg veins is less than optimal.",
+"harm": "moderate",
+"harm_reason": "It should be evaluated by a healthcare professional because it can worsen or lead to complications if the underlying circulation issues are not managed properly.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Cellulitis Impetigo and other Bacterial Infections\\Erysipelas-11.jpg": {
+"group": "lupus",
+"condition": "Discoid lupus erythematosus",
+"description": "The image shows a man with redness and mild scaling on his cheek, which can be a sign of a connective-tissue condition. These skin changes are often sensitive to sunlight and can sometimes lead to localized scarring over time.",
+"harm": "moderate",
+"harm_reason": "Connective-tissue conditions should be evaluated and managed by a doctor to prevent worsening skin changes and potential scarring.",
+"confidence": 0.8,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\151ab3fe09310fc1c2d9e2b2c7f07fe5.jpg": {
+"group": "granuloma",
+"condition": "Granuloma annulare",
+"description": "This image shows a raised, ring-shaped pinkish lesion on the skin. It is characteristic of granuloma annulare, a benign skin condition often featuring ring-like clusters of small bumps.",
+"harm": "mild",
+"harm_reason": "It is generally harmless and often resolves on its own, though it can sometimes persist or cause cosmetic concern.",
+"confidence": 0.82,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\31-classes-of-skin-disease\\Atlas dan ISIC2019 (31 classes)\\train\\Epidermolysis Bullosa Pruriginosa\\1827.jpg": {
+"group": "psoriasis",
+"condition": "Psoriasis",
+"description": "The image shows raised, reddish or pinkish patches of skin covered with silvery, scaly borders on an area with prominent body hair. Psoriasis is a chronic condition where the immune system accelerates skin cell growth, leading to these distinct plaques.",
+"harm": "moderate",
+"harm_reason": "While not immediately life-threatening, it is a chronic condition that typically requires medical management to control symptoms and prevent worsening flares.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\test\\Bullous Disease Photos\\dermatitis-herpetiformis-72.jpg": {
+"group": "psoriasis",
+"condition": "pityriasis rosea",
+"description": "The image shows scattered pinkish-red papules and plaques with fine, collar-like scaling distributed across the back. This common, benign rash typically starts with a single larger patch and can develop into a widespread, mild eruption on the trunk. It is generally self-limiting and resolves on its own within a few weeks.",
+"harm": "mild",
+"harm_reason": "It is uncomfortable and itchy, but it is not dangerous and typically goes away on its own without long-term effects.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\4ee18f789cecf807e4672b12a39a6f5c.jpg": {
+"group": "eczema",
+"condition": "stasis dermatitis",
+"description": "The image shows a well-defined, reddish, and slightly inflamed area of skin on the lower leg, typical of stasis dermatitis which often develops due to poor circulation in the lower extremities. It can be accompanied by swelling, scaling, or a feeling of heaviness in the leg.",
+"harm": "moderate",
+"harm_reason": "It should be evaluated and treated by a physician to manage underlying circulation issues and prevent complications like skin breakdown or infection.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\test\\Atopic Dermatitis Photos\\IchthosisIMG030-GP3.jpg": {
+"group": "systemic",
+"condition": "Severe ichthyosis",
+"description": "The image shows severe scaling and thickening of the skin, resembling fish scales, typically caused by a genetic or systemic condition that disrupts normal skin shedding. This can lead to a dry, cracked, and heavily textured appearance, most commonly affecting the limbs.",
+"harm": "moderate",
+"harm_reason": "While often manageable, severe ichthyosis requires ongoing medical supervision and skin care because the impaired skin barrier can lead to discomfort, restricted movement, and increased risk of secondary infections.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\961d7614dcde8fe49ca6bd24e0d05ed1.jpg": {
+"group": "psoriasis",
+"condition": "Palmoplantar psoriasis",
+"description": "This image shows thickened, scaly, and reddish plaques on the palm of the hand and fingers. This is a chronic inflammatory skin condition that affects the palms and soles, leading to scaling and dryness.",
+"harm": "moderate",
+"harm_reason": "It can be persistent and uncomfortable, requiring medical management to control flare-ups and maintain skin health.",
+"confidence": 0.82,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\31-classes-of-skin-disease\\Atlas dan ISIC2019 (31 classes)\\train\\Tinea Corporis\\7248.jpg": {
+"group": "fungal",
+"condition": "tinea corporis",
+"description": "This image shows a well-defined, ring-shaped rash with a scaly, raised border and central clearing on the skin. This appearance is characteristic of a superficial fungal infection commonly known as ringworm.",
+"harm": "mild",
+"harm_reason": "While uncomfortable and contagious through skin contact, it is not dangerous and typically resolves well with proper treatment.",
+"confidence": 0.88,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Tinea Ringworm Candidiasis and other Fungal Infections\\tinea-versicolor-150.jpg": {
+"group": "fungal",
+"condition": "tinea versicolor",
+"description": "The image shows multiple small, slightly scaly patches of lighter pigmentation distributed across the upper back and shoulders. This is a common, non-contagious fungal condition caused by an overgrowth of yeast naturally found on the skin, often more noticeable after sun exposure.",
+"harm": "mild",
+"harm_reason": "It is a benign and superficial condition that causes primarily cosmetic changes and mild itching, but it does not pose a danger to health.",
+"confidence": 0.95,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Tinea Ringworm Candidiasis and other Fungal Infections\\tinea-body-173.jpg": {
+"group": "fungal",
+"condition": "tinea cruris",
+"description": "This image shows a well-demarcated, scaly, reddish rash distributed on the buttocks and gluteal cleft area. This presentation is commonly associated with a superficial fungal skin infection.",
+"harm": "mild",
+"harm_reason": "It is uncomfortable and itchy, but responds well to topical treatments and is not medically dangerous.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\b4af90a313de6d4472a938d71fd95d55.jpg": {
+"group": "fungal",
+"condition": "tinea corporis",
+"description": "This image shows a roughly circular, reddish rash with slightly raised borders, commonly known as ringworm. Ringworm is a very common superficial fungal infection of the skin that can affect any part of the body. Despite the name, it is not caused by a worm.",
+"harm": "mild",
+"harm_reason": "It is an uncomfortable and contagious condition, but it is not dangerous and is typically easily treated with appropriate self-care or doctor-prescribed creams.",
+"confidence": 0.95,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Hair Loss Photos Alopecia and other Hair Diseases\\anagen-effluvium-2.jpg": {
+"group": "hair",
+"condition": "androgenetic alopecia",
+"description": "This image shows thinning hair on the scalp where individual hair follicles and some miniaturized hairs are visible. It is a common form of hair thinning related to genetics and hormone sensitivity. It is a very common condition that develops gradually over time.",
+"harm": "harmless",
+"harm_reason": "This is a cosmetic condition that does not cause physical danger to health.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\b747b3a2d44cc3c11e9fb8ae43084db1.jpg": {
+"group": "granuloma",
+"condition": "granuloma annulare",
+"description": "The image shows smooth, reddish or skin-colored raised bumps arranged in a ring-like pattern on the foot. This condition is a benign skin reaction that often appears in circles or arcs, typically on the hands or feet.",
+"harm": "harmless",
+"harm_reason": "Granuloma annulare is generally a harmless and self-limiting condition that does not cause internal illness or long-term damage.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\8ce1e6bbc65aa5521a6fe8672a1aef13.jpg": {
+"group": "lupus",
+"condition": "Cutaneous lupus erythematosus",
+"description": "This image shows a reddish skin rash and mild texture changes around the nose and cheek area. These findings can sometimes be associated with connective-tissue conditions such as lupus, which affects the skin and can be triggered or worsened by sun exposure.",
+"harm": "moderate",
+"harm_reason": "While not immediately life-threatening, this condition can cause permanent skin changes and requires proper medical evaluation and management.",
+"confidence": 0.75,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\oily-dry-and-normal-skin-types-dataset\\Oily-Dry-Skin-Types\\train\\normal\\normal_9928d7c6d35783e5e302_jpg.rf.7ba9aa876b0efdf3893369ef5b3923d7.jpg": {
+"group": "healthy",
+"condition": "Normal healthy skin",
+"description": "The image shows clear, healthy facial skin with a normal texture and appearance. There are no signs of abnormal rashes, lesions, or significant skin conditions.",
+"harm": "harmless",
+"harm_reason": "Healthy skin is completely normal and requires no medical treatment.",
+"confidence": 0.95,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\test\\Hair Loss Photos Alopecia and other Hair Diseases\\acne-keloidalis-52.jpg": {
+"group": "bacterial",
+"condition": "Folliculitis",
+"description": "The image shows inflamed, red bumps centered around hair follicles on the back of the neck or scalp area. This condition, known as folliculitis, occurs when hair follicles become irritated or infected with bacteria, leading to small pimple-like lesions.",
+"harm": "mild",
+"harm_reason": "Folliculitis is generally mild and often improves with gentle cleansing, though persistent cases may require medical evaluation.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Hair Loss Photos Alopecia and other Hair Diseases\\acne-keloidalis-4.jpg": {
+"group": "bacterial",
+"condition": "folliculitis",
+"description": "The image shows inflamed, red bumps centered around individual hair follicles, characteristic of folliculitis. This is a common skin condition usually caused by bacterial or fungal irritation within the hair roots.",
+"harm": "mild",
+"harm_reason": "Folliculitis is generally uncomfortable and can be persistent, but it is not typically dangerous and often resolves with proper hygiene and care.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\oily-dry-and-normal-skin-types-dataset\\Oily-Dry-Skin-Types\\train\\normal\\normal_0b71ab4726e465b07b5f_jpg.rf.af31e69030fc902cc5ac473c5275c50c.jpg": {
+"group": "healthy",
+"condition": "normal skin",
+"description": "The photograph shows clear skin with normal facial features, well-hydrated texture, and a healthy overall appearance. There are no notable signs of inflammation, rashes, or unusual skin lesions.",
+"harm": "harmless",
+"harm_reason": "Normal skin is completely healthy and requires no medical treatment.",
+"confidence": 0.95,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Herpes HPV and other STDs Photos\\AIDS-16.jpg": {
+"group": "benign",
+"condition": "Keloids",
+"description": "The image shows several raised, firm, and slightly shiny scar-like growths located on the arms and chest. These represent keloids, which are an overgrowth of dense fibrous tissue that develops after skin injury or inflammation.",
+"harm": "mild",
+"harm_reason": "Keloids are generally non-cancerous and harmless, though they can sometimes cause discomfort, itching, or cosmetic concern.",
+"confidence": 0.82,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Herpes HPV and other STDs Photos\\AIDS-11.jpg": {
+"group": "warts",
+"condition": "Condyloma acuminata",
+"description": "The image shows clustered, flesh-colored, cauliflower-like growths in the anogenital region. These lesions are caused by certain types of human papillomavirus (HPV) and are commonly known as genital warts.",
+"harm": "moderate",
+"harm_reason": "While generally not life-threatening, these growths are contagious and can spread, persist, or cause discomfort, requiring medical evaluation and treatment.",
+"confidence": 0.95,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Herpes HPV and other STDs Photos\\herpes-type-2-recurrent-27.jpg": {
+"group": "herpes",
+"condition": "Genital herpes",
+"description": "This image shows localized grouping of small fluid-filled bumps and mild erosions on genital skin. This presentation is commonly associated with viral skin infections such as herpes simplex, which can cause recurring outbreaks of blisters and sores.",
+"harm": "moderate",
+"harm_reason": "It is moderately harmful because it can cause uncomfortable flare-ups and is contagious, requiring medical management.",
+"confidence": 0.8,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\31-classes-of-skin-disease\\Atlas dan ISIC2019 (31 classes)\\train\\Leprosy Tuberculoid\\img_168_2.jpg": {
+"group": "granuloma",
+"condition": "Granuloma annulare",
+"description": "The image shows a small, raised, ring-shaped skin-colored lesion being examined with a needle sign (wooden-needle test or pinch test for induration). Granuloma annulare is a benign skin condition that typically presents as small bumps arranged in a ring or circle, often on the hands or feet. The exact cause is unknown, but it is generally harmless and often resolves on its own without treatment.",
+"harm": "harmless",
+"harm_reason": "Granuloma annulare is a benign, non-cancerous condition that usually causes no physical symptoms and frequently resolves without any medical intervention.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\31-classes-of-skin-disease\\Atlas dan ISIC2019 (31 classes)\\train\\Leprosy Tuberculoid\\3541.jpg": {
+"group": "granuloma",
+"condition": "granuloma annulare",
+"description": "The image shows a distinct, ring-shaped arrangement of small, firm, reddish-brown bumps on the lower leg or ankle. This is commonly known as granuloma annulare, a benign skin condition that often appears as a localized ring of small bumps.",
+"harm": "harmless",
+"harm_reason": "Granuloma annulare is a harmless condition that is not contagious and often resolves on its own without requiring treatment.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\7c4d9ac7507a7196eb5bedb3f2a9c10d.jpg": {
+"group": "benign",
+"condition": "Macular amyloidosis",
+"description": "The image shows multiple small, brownish, slightly raised or flat spots coalescing in a rippled pattern, typically on the back or trunk. This condition involves a deposit of protein fibers in the upper layers of the skin, often associated with chronic itching or friction.",
+"harm": "mild",
+"harm_reason": "It is generally a benign and non-life-threatening condition, though it can be persistently itchy and cosmetically bothersome.",
+"confidence": 0.8,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\31-classes-of-skin-disease\\Atlas dan ISIC2019 (31 classes)\\train\\Leprosy Tuberculoid\\img_175_2.jpg": {
+"group": "leprosy",
+"condition": "Borderline lepromatous leprosy",
+"description": "The photograph displays thickened, infiltrated skin plaques and nodules around the nose and cheek area in a patient with darker skin. These features can be associated with certain chronic infections that affect the skin and nerves, such as leprosy. A formal medical examination by a specialist is needed for accurate diagnosis.",
+"harm": "serious",
+"harm_reason": "If left untreated, chronic conditions affecting skin and nerves can lead to progressive nerve damage and severe physical complications.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Light Diseases and Disorders of Pigmentation\\sun-damaged-skin-99.jpg": {
+"group": "hair",
+"condition": "Androgenetic alopecia",
+"description": "This image shows thinning of the hair on the scalp, which is commonly known as male pattern baldness. The scalp skin itself appears mostly normal and healthy beneath the thinning hair.",
+"harm": "harmless",
+"harm_reason": "Pattern baldness is a very common, non-dangerous physical characteristic rather than a medical disease.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\test\\Light Diseases and Disorders of Pigmentation\\pseudo-porphyria-10.jpg": {
+"group": "psoriasis",
+"condition": "Lichen planus",
+"description": "The image shows flat-topped, purplish-pink bumps and plaques clustered on the back of the hand and wrist, some showing characteristic whitish lines on the surface. This inflammatory condition affects the skin and can sometimes be itchy or persistent. It is best evaluated by a healthcare professional for proper confirmation and management.",
+"harm": "mild",
+"harm_reason": "While it can be uncomfortable and take time to resolve, it is not life-threatening and is manageable with appropriate care.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\31-classes-of-skin-disease\\Atlas dan ISIC2019 (31 classes)\\train\\Lupus Erythematosus Chronicus Discoides\\11131.jpg": {
+"group": "lupus",
+"condition": "Discoid lupus erythematosus",
+"description": "The image shows a well-defined, somewhat thickened red to hyperpigmented lesion on the facial skin, displaying central scaling and pigment changes. This appearance can be characteristic of chronic cutaneous lupus erythematosus, an inflammatory skin condition associated with connective tissue disorders. A professional dermatological examination is recommended for an accurate diagnosis.",
+"harm": "moderate",
+"harm_reason": "Connective tissue conditions like lupus require ongoing medical management to control inflammation and prevent scarring or skin damage.",
+"confidence": 0.8,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\36795d14c4c8da5a070930476770ccb7.jpg": {
+"group": "benign",
+"condition": "seborrhoeic keratosis",
+"description": "This image shows multiple well-defined, stuck-on appearing pigmented papules and plaques with a warty surface, typically found on sun-exposed areas of older adults. These are very common, non-cancerous skin growths that can vary in color from light tan to dark brown or black. They are entirely benign and do not turn into skin cancer.",
+"harm": "harmless",
+"harm_reason": "These growths are completely benign and primarily of cosmetic concern without posing any health risks.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\6c2bb59f2beeaea6fd2807a6f7ea60a4.jpg": {
+"group": "eczema",
+"condition": "dermatitis",
+"description": "This image shows a patch of red, slightly dry, and irritated skin on the torso. This appearance is characteristic of dermatitis or eczema, which often presents as inflamed, sensitive areas triggered by irritants, allergens, or friction.",
+"harm": "mild",
+"harm_reason": "While uncomfortable and sometimes itchy, dermatitis is generally not dangerous and typically improves with proper skincare and identifying triggers.",
+"confidence": 0.8,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\b30468853e0ad984dfbf53fceee5942f.jpg": {
+"group": "benign",
+"condition": "dermatofibroma",
+"description": "The image shows a small, firm, brownish nodule on the skin, which commonly appears on the limbs. This type of benign skin growth is very common and typically develops after minor trauma, such as an insect bite or a small nick.",
+"harm": "harmless",
+"harm_reason": "Dermatofibromas are completely benign, non-cancerous growths that do not pose a health threat.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\acf9046d1fb65c2020996133795f9b76.jpg": {
+"group": "vascular",
+"condition": "Hemangioma",
+"description": "The image shows a dark, raised reddish-purple lesion on the scalp, which appears to be a vascular birthmark or lesion. This type of growth is typically composed of a cluster of extra blood vessels near the skin's surface. A doctor can evaluate it to confirm the diagnosis and determine if monitoring or treatment is needed.",
+"harm": "mild",
+"harm_reason": "While many vascular birthmarks are benign and self-limiting, they should be monitored by a healthcare professional to ensure they do not cause complications or bleed.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\ea19152434347b623f2e98c92ebd7938.jpg": {
+"group": "nail",
+"condition": "Onychomadesis",
+"description": "The image shows a toenail where the nail plate has separated from the underlying nail bed, revealing exposed, tender tissue underneath. This condition often occurs after a physical injury, systemic illness, or severe stress that temporarily halts nail growth.",
+"harm": "mild",
+"harm_reason": "It can be uncomfortable and prone to minor irritation or secondary infection, but typically resolves over time as a new nail grows in.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\16e46cf96a792a51134f8fef4abe290f.jpg": {
+"group": "pigment",
+"condition": "Nevus anemicus",
+"description": "The image shows a pale, irregularly shaped patch of skin on the neck of a young child. This appearance is typically caused by a congenital localized hypersensitivity to catecholamines, leading to persistent vasoconstriction in that specific area.",
+"harm": "harmless",
+"harm_reason": "This is a benign, non-progressive birthmark that poses no physical danger and typically requires no medical treatment.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\oily-dry-and-normal-skin-types-dataset\\Oily-Dry-Skin-Types\\train\\oily\\oily_698c800767fe8306e48a_jpg.rf.38357fd9143e81102b804ee1cd4da738 - Copy.jpg": {
+"group": "healthy",
+"condition": "normal skin",
+"description": "The photograph shows a clear area of facial skin with no significant lesions, rashes, or abnormal pigment changes visible. This appears to represent normal, healthy skin without signs of disease.",
+"harm": "harmless",
+"harm_reason": "Normal skin is entirely harmless and requires no treatment.",
+"confidence": 0.95,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\3eb460ad57144b0d189b5688579cb8bc.jpg": {
+"group": "pigment",
+"condition": "Nevus of Ota",
+"description": "This image shows a bluish-brown, freckled pigmentation pattern involving the sclera and surrounding facial structures of the eye. This is typically a congenital or early developmental birthmark involving melanocytes in deep skin and eye tissues. It is important to have it evaluated by a specialist to monitor any changes over time.",
+"harm": "moderate",
+"harm_reason": "While generally benign, pigmented lesions involving the eye can require long-term ophthalmological monitoring to watch for potential complications or malignant transformation.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\31-classes-of-skin-disease\\Atlas dan ISIC2019 (31 classes)\\train\\Nevus\\ISIC_0000082.jpg": {
+"group": "melanoma",
+"condition": "Melanoma",
+"description": "This dermoscopic image shows an irregular pigmented skin lesion with asymmetrical features and a network pattern. It is important to have any changing or unusual pigmented spots evaluated by a dermatologist for a definitive diagnosis.",
+"harm": "serious",
+"harm_reason": "Melanoma is a serious form of skin cancer that requires prompt medical evaluation and treatment to prevent it from spreading.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Nail Fungus and other Nail Disease\\onycholysis-13.jpg": {
+"group": "nail",
+"condition": "Terry's nails",
+"description": "The image shows fingernails with a distinct pattern of whitening toward the base and a pinkish-brown band near the tips. This nail finding can sometimes be associated with underlying systemic health conditions or changes in blood flow.",
+"harm": "moderate",
+"harm_reason": "While the nail appearance itself is not dangerous, it can serve as a warning sign for an underlying internal medical condition that should be evaluated by a physician.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Nail Fungus and other Nail Disease\\pseudomonas-40.jpg": {
+"group": "nail",
+"condition": "Pseudomonas nail infection (green nail syndrome)",
+"description": "The image shows a significant greenish-black discoloration involving the nail plate. This appearance is commonly associated with a bacterial infection underneath or within the nail, often thriving in moist environments.",
+"harm": "mild",
+"harm_reason": "While generally not dangerous, the infection can cause discomfort and nail changes that require proper evaluation and treatment by a healthcare professional.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\08b86a79a2cfc8e67d0de6aab808d1e4.jpg": {
+"group": "eczema",
+"condition": "stasis dermatitis",
+"description": "The image shows areas of chronic inflammation, scaling, and hyperpigmentation on the skin, typical of stasis dermatitis. This condition is related to poor circulation in the lower legs, which causes fluid retention and skin irritation over time.",
+"harm": "moderate",
+"harm_reason": "Stasis dermatitis should be managed by a doctor to prevent complications such as skin ulcers, infection, and permanent tissue thickening.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\9eb488a5891f2a4fce1d2a930b20a3a6.jpg": {
+"group": "psoriasis",
+"condition": "psoriasis",
+"description": "This image shows well-defined, raised, scaly plaques typically found on extensor surfaces like knees or elbows. These patches are a result of rapid skin cell turnover often associated with a chronic immune-mediated condition.",
+"harm": "moderate",
+"harm_reason": "It is a chronic condition that can significantly impact daily comfort and quality of life, typically requiring medical management to control flare-ups and prevent spreading.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Psoriasis pictures Lichen Planus and related diseases\\Lichen-Sclerosus-Skin-27.jpg": {
+"group": "eczema",
+"condition": "perianal dermatitis",
+"description": "The image shows redness, irritation, and mild scaling around the anal area. This type of dermatitis can be caused by moisture, friction, or sensitivity to products contacting the sensitive skin in that region.",
+"harm": "mild",
+"harm_reason": "While it can be uncomfortable and cause itching or burning, it is generally not dangerous and can be managed with proper hygiene and soothing treatments.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Nail Fungus and other Nail Disease\\mucous-cyst-62.jpg": {
+"group": "nail",
+"condition": "paronychia",
+"description": "This image shows inflammation and irritation around the skin fold of a finger nail, accompanied by some scaling and debris near the nail edge. This presentation is commonly associated with an infection or localized irritation of the nail fold, known as paronychia.",
+"harm": "mild",
+"harm_reason": "While uncomfortable and sometimes painful, it is generally not dangerous and can often be managed with proper care and medical advice.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\56c320285ede9c89be90c5db002cf19e.jpg": {
+"group": "infestation",
+"condition": "pubic lice infestation",
+"description": "The image shows small reddish-brown spots and irritation in the pubic hair region. This appearance is characteristic of pubic lice, commonly known as crabs, which are tiny parasites that attach to coarse body hair and feed on small amounts of blood.",
+"harm": "mild",
+"harm_reason": "While uncomfortable and causing itching, pubic lice are not dangerous and are easily treated with proper self-care products.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Scabies Lyme Disease and other Infestations and Bites\\spider-bite-24.jpg": {
+"group": "infestation",
+"condition": "Tick bite",
+"description": "The image shows a distinct, localized round area of redness surrounding a central bite mark with small crusts. This reaction is commonly associated with a tick bite, which can sometimes produce a characteristic target-like rash.",
+"harm": "moderate",
+"harm_reason": "Tick bites require medical evaluation because they can potentially transmit infectious diseases such as Lyme disease.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\534efa4991400aa326f3ddadbe961225.jpg": {
+"group": "cancer",
+"condition": "Basal cell carcinoma",
+"description": "This appears as a small, slightly raised pinkish or translucent growth with fine surface blood vessels and a central depression or crust. It is a very common type of slow-growing skin cancer caused by sun exposure.",
+"harm": "serious",
+"harm_reason": "While slow to spread, it is a skin cancer that will continue to grow locally and damage surrounding tissue if not removed.",
+"confidence": 0.82,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\118004ae04d7c04a7abb96c38483b6b0.jpg": {
+"group": "cancer",
+"condition": "Basal cell carcinoma",
+"description": "This image shows a well-defined pinkish plaque with raised, rolled borders and some surface crusting or erosion located on the cheek near the eye. This appearance is commonly associated with a type of slow-growing skin cancer that develops from sun exposure.",
+"harm": "serious",
+"harm_reason": "Skin cancers require medical evaluation and treatment to prevent local tissue damage and potential growth.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\test\\Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions\\basal-cell-carcinoma-lesion-89.jpg": {
+"group": "cancer",
+"condition": "Basal cell carcinoma",
+"description": "The image shows a small, pinkish or translucent lesion with a central crust or sore, often accompanied by tiny visible blood vessels. This appearance can be associated with basal cell carcinoma, a very common and slow-growing type of skin cancer that typically develops on sun-exposed areas. A healthcare professional can perform a simple examination or biopsy to confirm what it is.",
+"harm": "moderate",
+"harm_reason": "While typically very slow-growing and rarely life-threatening, it can slowly damage surrounding tissue and needs professional treatment.",
+"confidence": 0.8,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Seborrheic Keratoses and other Benign Tumors\\seborrheic-keratoses-ruff-98.jpg": {
+"group": "benign",
+"condition": "Seborrheic keratosis",
+"description": "The image shows a sharply demarcated, stuck-on skin lesion with a verrucous and slightly crumbly or waxy surface. This is a common, non-cancerous skin growth that typically appears as people age and is completely harmless.",
+"harm": "harmless",
+"harm_reason": "Seborrheic keratoses are entirely benign growths that do not pose any health threat and require treatment only if irritated by clothing.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\31-classes-of-skin-disease\\Atlas dan ISIC2019 (31 classes)\\train\\Pigmented Benign Keratosis\\ISIC_0026606.jpg": {
+"group": "melanoma",
+"condition": "Melanoma",
+"description": "This dermoscopic image shows an asymmetrical pigmented lesion with irregular borders, varying shades of brown and black, and atypical pigment networks. These features can sometimes be associated with melanoma or atypical moles, which require careful clinical assessment.",
+"harm": "serious",
+"harm_reason": "Melanoma is a serious form of skin cancer that requires prompt professional diagnosis and treatment to prevent it from spreading.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Seborrheic Keratoses and other Benign Tumors\\skin-tags-polyps-28.jpg": {
+"group": "benign",
+"condition": "Molluscum contagiosum",
+"description": "The image shows small, firm, dome-shaped bumps on the skin, often with a slight dimple in the center. These are commonly known as molluscum contagiosum, which are small skin growths caused by a harmless virus.",
+"harm": "harmless",
+"harm_reason": "The condition is generally harmless and usually resolves on its own without leaving scars.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\test\\Systemic Disease\\xanthomas-28.jpg": {
+"group": "psoriasis",
+"condition": "Granular parakeratosis",
+"description": "The image shows small, reddish-brown bumps and scaly patches concentrated around the elbow areas of the arms. These types of skin eruptions can be associated with various inflammatory or reactive conditions that affect the outer layers of the skin.",
+"harm": "mild",
+"harm_reason": "It can be uncomfortable and cosmetically bothersome, but it is generally not dangerous and can be managed with proper medical care.",
+"confidence": 0.8,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Systemic Disease\\gout-3.jpg": {
+"group": "leprosy",
+"condition": "Leprosy",
+"description": "The image shows a hand with significant thickening and scaling of the skin, particularly affecting one of the fingers. This appearance can be associated with certain chronic infections or specific forms of leprosy. A medical evaluation is necessary to properly diagnose and manage the condition.",
+"harm": "serious",
+"harm_reason": "Leprosy is a serious condition that requires prompt medical treatment to prevent long-term nerve damage and physical disability.",
+"confidence": 0.82,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Systemic Disease\\acrodermatitis-enteropathica-4.jpg": {
+"group": "infestation",
+"condition": "Cutaneous larva migrans",
+"description": "This image shows a serpiginous, reddish, track-like rash on the foot, often caused by hookworm larvae migrating under the top layer of skin. It typically occurs after walking barefoot on contaminated soil or sand. While uncomfortable and itchy, it is generally self-limiting but can persist without treatment.",
+"harm": "mild",
+"harm_reason": "It can be uncomfortable and itchy, but it is typically localized and manageable with medical treatment.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Urticaria Hives\\hives-Urticaria-Acute-8.jpg": {
+"group": "eczema",
+"condition": "contact dermatitis",
+"description": "The image shows a localized area of red, slightly inflamed, and irritated skin. This appearance is commonly associated with an allergic reaction or irritation from direct contact with a substance, known as contact dermatitis.",
+"harm": "mild",
+"harm_reason": "It can be uncomfortable and itchy, but it is typically not dangerous and often resolves with avoiding the trigger and basic self-care.",
+"confidence": 0.8,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\b56fefc83dfe97fe24d8bf69a31700e4.jpg": {
+"group": "granuloma",
+"condition": "granuloma annulare",
+"description": "The image shows a raised, ring-shaped pinkish plaque with slightly central flattening on the skin. This appearance is commonly seen in a benign skin condition where small bumps form a ring pattern.",
+"harm": "harmless",
+"harm_reason": "It is generally harmless, does not cause internal illness, and often fades away on its own over time.",
+"confidence": 0.82,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\c68f3adcd7cfc8a94ae756cde36ec965.jpg": {
+"group": "infestation",
+"condition": "insect bites",
+"description": "The image shows multiple small, red, inflamed bumps scattered across the feet and ankles. These are typical reactions to insect bites or papular urticaria, where the skin reacts to minor trauma or bites from small bugs.",
+"harm": "mild",
+"harm_reason": "Insect bites are generally uncomfortable and itchy, but they typically resolve on their own within a few days or weeks with proper skin care.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Vascular Tumors\\hemangioma-46.jpg": {
+"group": "cancer",
+"condition": "squamous cell carcinoma",
+"description": "This image shows a localized, thickened area on the skin with central crusting or scaling, often arising in sun-exposed regions. It represents a type of skin cancer that develops from the outer layers of the skin. A professional medical evaluation and biopsy are recommended to confirm the diagnosis.",
+"harm": "serious",
+"harm_reason": "This is a form of skin cancer that requires prompt medical treatment to prevent it from growing or spreading.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Urticaria Hives\\PUPPP-16.jpg": {
+"group": "rash",
+"condition": "Polymorphous eruption of pregnancy / PUPPP",
+"description": "This image shows itchy, red bumps and stretch-mark-like lines across the abdomen during late pregnancy. This common condition typically appears on the belly in the third trimester and resolves after delivery.",
+"harm": "mild",
+"harm_reason": "It can be very itchy and uncomfortable, but it is harmless to the mother and baby and resolves after childbirth.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\4321628c680d97fc661d86f1522b82c2.jpg": {
+"group": "vascular",
+"condition": "Kaposi sarcoma of the tongue",
+"description": "This image shows raised, dark purple or reddish lesions distributed across the surface of the tongue. These vascular growths can be associated with underlying systemic conditions or immune system changes that require professional medical evaluation.",
+"harm": "serious",
+"harm_reason": "It can be dangerous to health and requires professional medical evaluation and treatment.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Vascular Tumors\\cherry-angioma-28.jpg": {
+"group": "vascular",
+"condition": "cherry angiomas",
+"description": "The image shows numerous small, bright red to purple papules distributed across the chest and abdomen. These are cherry angiomas, which are extremely common, benign growths made up of clusters of small blood vessels.",
+"harm": "harmless",
+"harm_reason": "Cherry angiomas are non-cancerous, benign collections of blood vessels that do not cause health problems and typically only require attention if they are cosmetically bothersome or frequently bleed due to trauma.",
+"confidence": 0.95,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\da447ac94f726beb49db55b4ebc0e929.jpg": {
+"group": "psoriasis",
+"condition": "Psoriasis",
+"description": "This image shows raised, red, scaly patches and plaques distributed across the skin surface, commonly seen in conditions like plaque psoriasis. It involves inflammation and rapid buildup of skin cells, creating distinct red areas with silvery scaling.",
+"harm": "moderate",
+"harm_reason": "While generally not immediately life-threatening, it is a chronic condition that requires proper medical management to control inflammation and prevent worsening.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\mpox-skin-lesion-dataset-version-20-msld-v20\\Original Images\\Original Images\\FOLDS\\fold1\\Train\\Measles\\MSL_01_02.jpg": {
+"group": "lupus",
+"condition": "Systemic Lupus Erythematosus",
+"description": "The image shows a reddish rash across the cheeks and bridge of the nose, commonly known as a malar rash. This type of rash can be associated with underlying systemic conditions and inflammatory processes.",
+"harm": "moderate",
+"harm_reason": "It can be associated with systemic autoimmune conditions that require medical management and monitoring.",
+"confidence": 0.8,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Vasculitis Photos\\erythema-multiforme-120.jpg": {
+"group": "granuloma",
+"condition": "Granuloma annulare",
+"description": "The image shows smooth, firm, raised bumps forming a ring-like pattern on the foot and ankle area. This non-infectious skin condition involves a benign inflammatory reaction under the skin's surface and is often harmless.",
+"harm": "harmless",
+"harm_reason": "It is a benign condition that typically causes no symptoms and often resolves on its own without requiring any medical treatment.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\test\\Warts Molluscum and other Viral Infections\\herpes-cutaneous-10.jpg": {
+"group": "granuloma",
+"condition": "Granuloma annulare",
+"description": "This image shows a small, raised, ring-shaped or clustered group of reddish bumps on the skin. This appearance is typical of granuloma annulare, a benign inflammatory skin condition that often forms circular patterns.",
+"harm": "harmless",
+"harm_reason": "Granuloma annulare is generally a cosmetic issue that is not dangerous and often goes away on its own.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Warts Molluscum and other Viral Infections\\warts-plantar-21.jpg": {
+"group": "warts",
+"condition": "Verruca vulgaris (wart)",
+"description": "The image shows a raised, thickened patch of skin on a toe with tiny dark dots within it, which are typical signs of a common wart. Warts are caused by a harmless virus that affects the top layers of the skin, leading to a localized overgrowth.",
+"harm": "mild",
+"harm_reason": "Warts are generally harmless and self-limiting, though they can occasionally be uncomfortable or persistent.",
+"confidence": 0.89,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Warts Molluscum and other Viral Infections\\herpes-type-1-primary-48.jpg": {
+"group": "warts",
+"condition": "Verruca (wart)",
+"description": "The image shows a small, firm growth on a finger, which appears to be a common wart caused by a viral infection of the outer layer of the skin. Warts are typically harmless and often go away on their own over time, though they can sometimes spread or persist.",
+"harm": "harmless",
+"harm_reason": "Warts are benign growths caused by a common virus and do not pose a threat to overall health.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\6bbb87c1ba24d5c658a393c19080c24f.jpg": {
+"group": "eczema",
+"condition": "chronic eczema",
+"description": "The image shows thickened, darkened skin with scaling and small raised bumps in a skin fold area. This presentation is characteristic of chronic dermatitis or eczema, where repeated scratching and inflammation lead to skin thickening.",
+"harm": "moderate",
+"harm_reason": "It can be uncomfortable and significantly impact quality of life, requiring professional medical evaluation and management.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Acne and Rosacea Photos\\rosacea-69.jpg": {
+"group": "infestation",
+"condition": "Demodicosis",
+"description": "This is a microscopic view showing Demodex mites residing inside a hair follicle or sebaceous gland. These tiny mites are common inhabitants of human skin and usually cause no symptoms when present in normal numbers.",
+"harm": "harmless",
+"harm_reason": "They are typically normal commensal organisms that rarely cause significant disease unless they overmultiply.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\202c0e3a6dfe43805c43b8be44d3bacf.jpg": {
+"group": "acne",
+"condition": "Acne fulminans or severe nodulocystic acne",
+"description": "The image shows inflamed, raised bumps, pustules, and crusting sores affecting the facial skin. This appears to be a severe form of inflammatory acne involving deep, painful breakouts.",
+"harm": "moderate",
+"harm_reason": "Severe forms of acne require medical evaluation and treatment to reduce deep inflammation and prevent permanent scarring.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\31-classes-of-skin-disease\\Atlas dan ISIC2019 (31 classes)\\train\\Impetigo\\12297.jpg": {
+"group": "psoriasis",
+"condition": "inverse psoriasis",
+"description": "This image shows a well-defined, reddish plaque with some scaling located in the armpit fold. This type of skin condition often appears in body folds where skin rubs against skin and can be managed with professional medical guidance.",
+"harm": "moderate",
+"harm_reason": "It requires proper diagnosis and treatment by a healthcare provider to manage symptoms and prevent discomfort or secondary infection in sensitive areas.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Cellulitis Impetigo and other Bacterial Infections\\impetigo-28.jpg": {
+"group": "psoriasis",
+"condition": "pityriasis rosea",
+"description": "This image shows a well-defined, oval-shaped pinkish patch with a delicate, fine border of scaling. This appearance is characteristic of a benign inflammatory rash that often begins with a larger initial patch followed by smaller spots.",
+"harm": "mild",
+"harm_reason": "It is generally harmless and self-limiting, typically resolving on its own within a few weeks without long-term consequences.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\838a5a4225a0f680dd1272acdc609f2f.jpg": {
+"group": "benign",
+"condition": "Follicular cyst",
+"description": "This magnified close-up reveals a firm, dome-shaped growth or cyst beneath the skin surface, showing a central pore or opening containing keratin. These common benign bumps form from hair follicles and typically develop slowly over time.",
+"harm": "mild",
+"harm_reason": "While generally harmless, these cysts can occasionally become inflamed, infected, or irritated, sometimes requiring medical drainage or removal.",
+"confidence": 0.8,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\31-classes-of-skin-disease\\Atlas dan ISIC2019 (31 classes)\\test\\Hailey-Hailey Disease\\img_129.jpg": {
+"group": "benign",
+"condition": "Striae distensae",
+"description": "The image shows linear bands of stretched skin, typically known as stretch marks, along with some localized red patches. These marks commonly appear when the skin undergoes rapid stretching due to growth, weight changes, or hormonal fluctuations. They are very common and harmless.",
+"harm": "harmless",
+"harm_reason": "Stretch marks are a purely cosmetic variation of the skin and do not pose any danger to health.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\e645097813227eccadaab98cbf5c4759.jpg": {
+"group": "other",
+"condition": "Scratched skin / superficial wound",
+"description": "The image shows a small scratch or minor cut on the cheek of an infant. This is a common, superficial skin injury often caused by accidental scratching with fingernails.",
+"harm": "harmless",
+"harm_reason": "Superficial scratches on the skin generally heal on their own without complications.",
+"confidence": 0.9,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\31-classes-of-skin-disease\\Atlas dan ISIC2019 (31 classes)\\train\\Epidermolysis Bullosa Pruriginosa\\1815.jpg": {
+"group": "leprosy",
+"condition": "lepromatous leprosy",
+"description": "The image shows numerous raised bumps and nodules distributed on the skin of a limb. These lesions are characteristic of certain advanced forms of mycobacterial skin infections.",
+"harm": "serious",
+"harm_reason": "It is a serious condition that requires prompt medical diagnosis and long-term antibiotic treatment to prevent nerve damage and permanent disability.",
+"confidence": 0.8,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Eczema Photos\\lichen-simplex-chronicus-137.jpg": {
+"group": "eczema",
+"condition": "lichen simplex chronicus",
+"description": "This image shows a thickened, well-defined patch of skin with visible scaling and reddish areas, commonly caused by repetitive scratching or rubbing. It is a chronic form of localized eczema that often results from the itch-scratch cycle.",
+"harm": "mild",
+"harm_reason": "It is uncomfortable and persistent, but not dangerous, though it requires breaking the itch-scratch cycle to heal.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\ae1df5f76b8cdc41d5f2c9be18417c7d.jpg": {
+"group": "psoriasis",
+"condition": "Erythrodermic psoriasis",
+"description": "The image shows widespread redness, inflammation, and extensive shedding of skin covering a large portion of the lower leg and foot. This presentation is characteristic of a severe and generalized inflammatory skin flare that affects the entire body surface.",
+"harm": "serious",
+"harm_reason": "This condition causes widespread skin barrier failure and systemic complications requiring urgent medical evaluation and management.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Atopic Dermatitis Photos\\05papules061205.jpg": {
+"group": "benign",
+"condition": "syringoma",
+"description": "This image shows small, skin-colored bumps clustered together, commonly found in areas like the eyelids or upper cheeks. These are benign sweat duct tumors that pose no health risk.",
+"harm": "harmless",
+"harm_reason": "These growths are entirely benign and cosmetic, requiring no treatment unless desired for appearance.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Tinea Ringworm Candidiasis and other Fungal Infections\\tinea-versicolor-196.jpg": {
+"group": "fungal",
+"condition": "tinea versicolor",
+"description": "The image shows large, irregular patches of lighter or slightly discolored skin across the upper back and shoulders. Tinea versicolor is a common, non-contagious fungal condition caused by an overgrowth of yeast naturally found on the skin surface. It often changes color depending on sun exposure.",
+"harm": "harmless",
+"harm_reason": "It is a benign superficial skin condition that causes primarily cosmetic changes and does not pose a danger to overall health.",
+"confidence": 0.9,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Tinea Ringworm Candidiasis and other Fungal Infections\\tinea-laboratory-49.jpg": {
+"group": "fungal",
+"condition": "tinea versicolor",
+"description": "This microscopy image shows yeast cells and short fungal hyphae, often described as 'spaghetti and meatballs', which is characteristic of certain fungal skin conditions. It reflects an overgrowth of yeast that naturally lives on the skin surface.",
+"harm": "mild",
+"harm_reason": "It is an uncomfortable or cosmetically bothersome condition caused by a common yeast overgrowth, but it is not dangerous and typically responds well to treatment.",
+"confidence": 0.95,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\test\\Tinea Ringworm Candidiasis and other Fungal Infections\\tinea-incognito-27.jpg": {
+"group": "eczema",
+"condition": "nummular eczema",
+"description": "The photograph shows well-defined, coin-shaped patches of red, dry, and scaly skin on the back of the hand and fingers. This is characteristic of nummular eczema, a type of dermatitis that often appears as itchy, irritated circular spots.",
+"harm": "mild",
+"harm_reason": "It can be uncomfortable, persistent, and prone to irritation, but it is not life-threatening.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\dde51fdf4e70830ac39b30e95e4aceee.jpg": {
+"group": "psoriasis",
+"condition": "Oral Lichen Planus",
+"description": "This image shows subtle white or pinkish changes and papules on the mucosal surface of the tongue. This may be related to oral lichen planus, a common inflammatory condition that affects mucous membranes in the mouth.",
+"harm": "mild",
+"harm_reason": "It can cause mild discomfort or sensitivity, but it is typically a chronic, benign condition that is not life-threatening.",
+"confidence": 0.75,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\1d0b82d28a80a08d7b1d7c5239576f50.jpg": {
+"group": "infestation",
+"condition": "myiasis",
+"description": "The image shows a small skin lesion with a central pore containing visible dark specks. This is characteristic of myiasis, a condition caused by fly larvae developing within the skin.",
+"harm": "moderate",
+"harm_reason": "While usually not life-threatening, it needs professional medical removal of the larvae to prevent infection and discomfort.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\test\\Hair Loss Photos Alopecia and other Hair Diseases\\pseudopelade-1.jpg": {
+"group": "hair",
+"condition": "alopecia areata",
+"description": "The photograph shows a smooth, well-demarcated area of hair loss on the scalp. This condition typically presents as patchy hair loss and is believed to be caused by the immune system mistakenly attacking the hair follicles.",
+"harm": "moderate",
+"harm_reason": "While not life-threatening, it requires medical evaluation and treatment because it can spread or persist if left unaddressed.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\223d5a58b12d15db303064a61e928fea.jpg": {
+"group": "psoriasis",
+"condition": "Psoriasis",
+"description": "The image shows inflamed, reddish skin on and around the ear with thick, silvery-white scaling and crusting. This appearance is characteristic of chronic inflammatory skin conditions like psoriasis or seborrheic dermatitis. A healthcare professional can provide a proper evaluation and diagnosis.",
+"harm": "moderate",
+"harm_reason": "While not immediately life-threatening, it can be persistent, uncomfortable, and typically requires medical management to control flare-ups and prevent worsening.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Hair Loss Photos Alopecia and other Hair Diseases\\acne-keloidalis-24.jpg": {
+"group": "hair",
+"condition": "Dissecting cellulitis of the scalp",
+"description": "This image shows a localized area of the scalp with swelling, redness, and hair loss, associated with inflammatory nodules and crusting. It is a rare inflammatory condition affecting hair follicles that can lead to scarring and permanent hair loss if left unchecked. A healthcare professional should evaluate this closely.",
+"harm": "moderate",
+"harm_reason": "It can cause localized tissue destruction and permanent hair loss if not properly evaluated and treated by a physician.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\oily-dry-and-normal-skin-types-dataset\\Oily-Dry-Skin-Types\\train\\oily\\oily_d3b09434a8b2693bf447_jpg.rf.0e7b4b22a328126533e83f989d3d6961.jpg": {
+"group": "healthy",
+"condition": "Normal facial skin",
+"description": "The image shows clear, healthy facial skin with no obvious signs of rashes, lesions, or disease. The skin appears even in tone and texture.",
+"harm": "harmless",
+"harm_reason": "Healthy skin is completely normal and requires no medical treatment.",
+"confidence": 0.95,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Hair Loss Photos Alopecia and other Hair Diseases\\anagen-effluvium-7.jpg": {
+"group": "hair",
+"condition": "androgenetic alopecia",
+"description": "This image shows thinning of the hair on the scalp with visible miniaturized hairs emerging from follicles. This is commonly associated with pattern hair loss, which can occur due to a combination of genetic and hormonal factors.",
+"harm": "harmless",
+"harm_reason": "Pattern hair loss is a cosmetic condition that does not threaten overall physical health.",
+"confidence": 0.92,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\oily-dry-and-normal-skin-types-dataset\\Oily-Dry-Skin-Types\\valid\\dry\\dry_4381964de5e7765cf14c_jpg.rf.68be09f2a801874ce0ea82041405e2d4.jpg": {
+"group": "healthy",
+"condition": "normal skin",
+"description": "The image shows clear, healthy facial skin with normal texture and coloration. There are no signs of abnormal rashes, lesions, or skin disease present.",
+"harm": "harmless",
+"harm_reason": "Normal healthy skin requires no medical attention or treatment.",
+"confidence": 0.95,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\oily-dry-and-normal-skin-types-dataset\\Oily-Dry-Skin-Types\\test\\dry\\dry_10583924a54a7cbcf5d0_jpg.rf.7c4cb0ac9522f3a0faaf230527e1abe9.jpg": {
+"group": "healthy",
+"condition": "normal skin",
+"description": "The image shows clear, healthy facial skin with an even tone and no visible signs of rash, lesions, or disease. It appears to be a promotional or educational photograph representing normal skin condition.",
+"harm": "harmless",
+"harm_reason": "Healthy skin is completely normal and requires no medical treatment.",
+"confidence": 0.99,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Herpes HPV and other STDs Photos\\pearly-penile-papules-13.jpg": {
+"group": "benign",
+"condition": "Hirsuties papillaris genitalis",
+"description": "This image shows small, orderly, skin-colored bumps arranged in rows around the edge of the head of the penis. These are known as penile papules, which are a very common, normal anatomical variation and not a disease or infection.",
+"harm": "harmless",
+"harm_reason": "This is a normal anatomical variant that requires no treatment and poses no health risks.",
+"confidence": 0.95,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\skin-disease-dataset\\skin-disease-datasaet\\train_set\\VI-shingles\\125_VI-shingles (25).jpg": {
+"group": "herpes",
+"condition": "shingles",
+"description": "The image shows a cluster of small fluid-filled blisters on an erythematous base, characteristic of a localized viral reactivation such as shingles. This condition typically causes a painful or tingling rash restricted to one side of the body along a nerve path.",
+"harm": "moderate",
+"harm_reason": "Shingles can cause significant pain and secondary infections if left untreated, and requires medical evaluation to manage symptoms and speed recovery.",
+"confidence": 0.82,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\skin-disease-dataset\\skin-disease-datasaet\\train_set\\VI-chickenpox\\145_VI-chickenpox (8).jpg": {
+"group": "herpes",
+"condition": "chickenpox",
+"description": "The image shows multiple small, scattered fluid-filled bumps and red spots across the back. This appearance is commonly associated with chickenpox, a viral condition causing itchy, blistering lesions that typically appear in crops.",
+"harm": "mild",
+"harm_reason": "Chickenpox is usually self-limiting and mild in children, though it can cause discomfort, itching, and potential scarring if scratched.",
+"confidence": 0.8,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\31-classes-of-skin-disease\\Atlas dan ISIC2019 (31 classes)\\train\\Leprosy Lepromatous\\3362.jpg": {
+"group": "psoriasis",
+"condition": "Pityriasis rubra pilaris",
+"description": "This image shows widespread reddened, thickened areas of skin with small bumpy patches across the back and shoulders. It is a rare inflammatory skin condition that causes scaling and thickened skin. A medical professional should evaluate this presentation to confirm the diagnosis and discuss management options.",
+"harm": "moderate",
+"harm_reason": "While not immediately life-threatening, it can be quite uncomfortable, widespread, and requires professional medical management.",
+"confidence": 0.8,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\31-classes-of-skin-disease\\Atlas dan ISIC2019 (31 classes)\\train\\Leprosy Tuberculoid\\img_214_2.jpg": {
+"group": "leprosy",
+"condition": "Leprosy",
+"description": "The image shows skin changes that can sometimes be associated with chronic conditions affecting the nerves and skin, such as leprosy. It is important to have such skin findings evaluated by a healthcare professional to determine the exact cause.",
+"harm": "serious",
+"harm_reason": "Leprosy is a chronic bacterial infection that can cause progressive nerve damage and physical disability if left untreated.",
+"confidence": 0.5,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\31-classes-of-skin-disease\\Atlas dan ISIC2019 (31 classes)\\train\\Leprosy Lepromatous\\img_244.jpg": {
+"group": "psoriasis",
+"condition": "pityriasis lichenoides et varioliformis acuta",
+"description": "The image shows numerous small, reddish-brown bumps distributed across the skin. This appearance is characteristic of an inflammatory skin condition that typically requires medical evaluation and monitoring.",
+"harm": "moderate",
+"harm_reason": "It requires medical assessment and treatment to manage inflammation and prevent potential scarring or worsening of symptoms.",
+"confidence": 0.75,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Light Diseases and Disorders of Pigmentation\\porphyrias-43.jpg": {
+"group": "granuloma",
+"condition": "granuloma annulare",
+"description": "The image shows small, firm, reddish or skin-colored bumps arranged in a ring-like pattern on the back of the hand. This is a benign inflammatory skin condition that often resolves on its own over time.",
+"harm": "mild",
+"harm_reason": "It is generally harmless and often painless, though it can persist for months before resolving.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\89fd119c76b23c2d3c7e5979ae429012.jpg": {
+"group": "granuloma",
+"condition": "Granuloma annulare",
+"description": "The image shows small, firm, skin-colored to pink bumps arranged in a ring-like pattern. This common skin condition causes smooth, raised areas that often resolve on their own without scarring.",
+"harm": "harmless",
+"harm_reason": "It is a benign condition that is generally asymptomatic and often clears up without any medical intervention.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\bd9ebdeec0d9b24cd794538703235b39.jpg": {
+"group": "systemic",
+"condition": "acanthosis nigricans",
+"description": "The image shows darkening and thickening of the skin on the back of the neck, often described as having a velvety texture. This condition is frequently linked to underlying metabolic changes, such as insulin resistance or related body-wide health factors.",
+"harm": "moderate",
+"harm_reason": "While the skin changes themselves are not dangerous, they often signal an underlying medical condition that requires evaluation and management by a healthcare professional.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Lupus and other Connective Tissue diseases\\lupus-chronic-cutaneous-10.jpg": {
+"group": "lupus",
+"condition": "Discoid lupus erythematosus",
+"description": "The image shows a reddish, slightly raised patch on the nose with some changes in skin texture and slight scaling. This type of finding can sometimes be associated with connective tissue conditions such as lupus affecting the skin. A professional medical evaluation is recommended for an accurate assessment and diagnosis.",
+"harm": "moderate",
+"harm_reason": "Connective tissue skin conditions require medical management to prevent scarring, skin changes, and potential systemic involvement.",
+"confidence": 0.82,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\c1b162ecbd537349c8df036a7f7627dc.jpg": {
+"group": "cancer",
+"condition": "acral melanoma",
+"description": "This image shows a pigmented, asymmetric dark lesion on the sole of the foot with an irregular border and a central nodule. Such findings on weight-bearing surfaces or sun-protected areas warrant professional evaluation to rule out acral melanoma.",
+"harm": "serious",
+"harm_reason": "Acral melanoma is a serious form of skin cancer that requires prompt diagnosis and treatment to prevent spreading.",
+"confidence": 0.8,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\61d5d67caeafd5fd1b793f1b281863dd.jpg": {
+"group": "leprosy",
+"condition": "Lepromatous leprosy",
+"description": "This clinical photograph shows a characteristic dermatological presentation associated with leprosy, involving changes in skin texture and pigmentation. Leprosy is a chronic infectious condition caused by bacteria that primarily affects the skin and peripheral nerves. Professional medical evaluation and diagnostic testing are essential to confirm the diagnosis and determine the appropriate long-term management plan.",
+"harm": "serious",
+"harm_reason": "If left untreated, leprosy can lead to progressive nerve damage, physical deformities, and severe long-term disability.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Lupus and other Connective Tissue diseases\\lupus-subacute-15.jpg": {
+"group": "systemic",
+"condition": "pellagra",
+"description": "The image shows severe, reddish-brown scaling rashes distributed prominently on sun-exposed areas such as the forearms, neck, and chest. This appearance is characteristic of pellagra, a condition caused by a severe deficiency of niacin (Vitamin B3) or its precursor tryptophan. It typically affects areas exposed to sunlight and friction.",
+"harm": "serious",
+"harm_reason": "Pellagra can lead to severe neurological and gastrointestinal complications and can be life-threatening if the underlying nutritional deficiency is not corrected.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\b3bc16cf6e0ce8cc7ee9a78ad45d0617.jpg": {
+"group": "cancer",
+"condition": "Keratoacanthoma",
+"description": "The image shows a dome-shaped skin growth with a central crust or plug of keratin, surrounded by a raised, firm border. This presentation is characteristic of a keratoacanthoma, a rapidly growing skin lesion that can sometimes mimic squamous cell carcinoma.",
+"harm": "moderate",
+"harm_reason": "It requires medical evaluation and excision because it can grow quickly and may sometimes be difficult to distinguish from skin cancer.",
+"confidence": 0.82,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\658446bde66c64e374d317e40fb40f91.jpg": {
+"group": "melanoma",
+"condition": "Acral melanoma",
+"description": "This image shows a dark pigmented lesion on the heel, which is an area that can occasionally develop acral melanoma, a rare form of skin cancer. Any unusual, changing, or irregular dark spots on the soles of the feet should be examined carefully by a healthcare professional.",
+"harm": "serious",
+"harm_reason": "Acral melanoma can be aggressive and dangerous to health if not diagnosed and treated promptly.",
+"confidence": 0.8,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\31-classes-of-skin-disease\\Atlas dan ISIC2019 (31 classes)\\train\\Nevus\\ISIC_0000495.jpg": {
+"group": "mole",
+"condition": "dysplastic nevus",
+"description": "This dermoscopic image shows a pigmented skin lesion characterized by an asymmetrical shape and variable brown pigmentation with network patterns. It appears to be an atypical or dysplastic mole, which warrants monitoring for any future changes.",
+"harm": "moderate",
+"harm_reason": "While many atypical moles remain benign, they can sometimes progress to melanoma or be difficult to distinguish from it without professional evaluation.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\4e22f7ad0e178a67b08db1d11219a0a8.jpg": {
+"group": "systemic",
+"condition": "Lamellar ichthyosis",
+"description": "The image shows widespread dark, plate-like scaling and thickening of the skin across the torso and abdomen. This is a rare, inherited skin condition characterized by abnormal shedding and buildup of skin cells.",
+"harm": "moderate",
+"harm_reason": "It can be physically uncomfortable, require specialized long-term skincare, and increase the risk of overheating or skin infections.",
+"confidence": 0.82,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\aafbf7d0e817f7bf2d1a9098d8514666.jpg": {
+"group": "benign",
+"condition": "halo nevus",
+"description": "The image shows a central pigmented mole surrounded by a distinct circular halo of pale or depigmented skin. This phenomenon occurs when the body's immune system targets the cells within the mole, causing it to gradually fade away.",
+"harm": "harmless",
+"harm_reason": "Halo nevi are typically benign immune responses to moles and do not cause health complications.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Nail Fungus and other Nail Disease\\mucous-cyst-61.jpg": {
+"group": "vascular",
+"condition": "pyogenic granuloma",
+"description": "This image shows a small, raised red bump growing near the edge of the fingernail, which often bleeds very easily with minor trauma. It is a type of benign vascular lesion made up of an overgrowth of tiny blood vessels, frequently appearing after an injury or during pregnancy.",
+"harm": "moderate",
+"harm_reason": "It can bleed persistently and needs to be evaluated by a healthcare professional for proper treatment and to confirm the diagnosis.",
+"confidence": 0.92,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\skin-disease-dataset\\skin-disease-datasaet\\train_set\\FU-nail-fungus\\_60_3146.jpg": {
+"group": "nail",
+"condition": "manicure",
+"description": "The image shows well-maintained fingernails with a clean and neat cosmetic appearance, often referred to as a French manicure or similar polished look. The nails appear healthy and well cared for.",
+"harm": "harmless",
+"harm_reason": "This is a normal cosmetic appearance with no signs of disease or injury.",
+"confidence": 0.95,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\test\\Nail Fungus and other Nail Disease\\psoriasis-100.jpg": {
+"group": "nail",
+"condition": "Nail dystrophy",
+"description": "The image shows a fingernail with noticeable surface roughness, splitting, and scaling, characteristics often associated with nail dystrophy. This can occur due to various factors including physical trauma, nutritional deficiencies, or underlying skin conditions affecting the nail matrix. It is generally a chronic issue that alters the normal texture and growth of the nail plate.",
+"harm": "mild",
+"harm_reason": "While generally not dangerous, nail changes can be uncomfortable, prone to catching, and may indicate an underlying health issue or local condition that requires evaluation.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\7861285579f643fa689eeb3e985b967e.jpg": {
+"group": "granuloma",
+"condition": "Granuloma annulare",
+"description": "The image shows small, smooth, ring-shaped pinkish bumps forming a circular pattern on the palm of the hand. Granuloma annulare is a relatively common skin condition that often appears as small bumps in rings, and its exact cause is often unknown.",
+"harm": "harmless",
+"harm_reason": "This condition is generally benign and often goes away on its own without needing any medical treatment.",
+"confidence": 0.82,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\e713a396e31d25e6a8c2871c6df116de.jpg": {
+"group": "psoriasis",
+"condition": "oral lichen planus",
+"description": "The image shows the lower lip with fine white lines and slight changes in texture, which can sometimes appear in conditions affecting the mucous membranes inside or around the mouth. This presentation is often associated with a chronic inflammatory condition like oral lichen planus. It is generally not contagious and often requires monitoring or management by a healthcare professional.",
+"harm": "mild",
+"harm_reason": "It can cause discomfort or sensitivity in the mouth, but it is typically not dangerous and is managed with appropriate medical guidance.",
+"confidence": 0.8,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\10cb8fd5a0f5915576e9748568b3051a.jpg": {
+"group": "infestation",
+"condition": "Cutaneous larva migrans",
+"description": "This image shows a distinct, raised, serpiginous or winding red track on the skin, typically caused by a migrating parasite under the top layer of the epidermis. It often causes intense itching and follows the path of the larva as it moves.",
+"harm": "moderate",
+"harm_reason": "While generally self-limiting over time, it can cause severe itching, discomfort, and potential secondary bacterial infections from scratching, thus requiring medical treatment.",
+"confidence": 0.95,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\dc2caa05152225298cb1805b60d63ce0.jpg": {
+"group": "infestation",
+"condition": "tick bite",
+"description": "The image shows a small tick attached to the skin, surrounded by a localized red and irritated area. Ticks are small parasites that feed on blood and can sometimes transmit tick-borne illnesses during a bite. Proper removal of the tick and monitoring for any spreading rashes are typically recommended.",
+"harm": "moderate",
+"harm_reason": "While the bite itself is not immediately dangerous, ticks can transmit serious infections such as Lyme disease, so it should be monitored closely and treated if symptoms develop.",
+"confidence": 0.95,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\test\\Psoriasis pictures Lichen Planus and related diseases\\Lichen-Nitidus-3.jpg": {
+"group": "systemic",
+"condition": "pellagra",
+"description": "The image shows thickened, darkened, and scaly skin changes on the hand. This presentation can be associated with nutritional deficiencies that affect skin health, such as a lack of certain vitamins. A healthcare professional can properly evaluate such findings.",
+"harm": "moderate",
+"harm_reason": "Systemic nutritional deficiencies require medical evaluation and treatment to prevent serious internal and external health complications.",
+"confidence": 0.75,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions\\basal-cell-carcinoma-lesion-52.jpg": {
+"group": "cancer",
+"condition": "squamous cell carcinoma",
+"description": "The image shows a raised, central ulcerated sore with crusted edges and surrounding redness on the skin. This appearance can be associated with a form of skin cancer that develops from the outer layers of the skin.",
+"harm": "serious",
+"harm_reason": "Skin cancers can progress, invade surrounding tissues, and potentially spread if not promptly evaluated and treated by a professional.",
+"confidence": 0.8,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Scabies Lyme Disease and other Infestations and Bites\\tick-bite-45.jpg": {
+"group": "benign",
+"condition": "Spitz nevus",
+"description": "The image shows a reddish-brown, raised bump with a smooth surface, located near the eyebrow. This type of mole often appears rapidly in children or young adults and can resemble other types of skin growths, making professional examination important.",
+"harm": "moderate",
+"harm_reason": "While typically benign, lesions like this require medical evaluation because they can closely mimic more serious skin conditions.",
+"confidence": 0.8,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\cd10a42d92d2d276fcf5d02284916e11.jpg": {
+"group": "cancer",
+"condition": "Basal cell carcinoma",
+"description": "The image shows a pink, raised dome-shaped skin growth with prominent tiny blood vessels (telangiectasias) and a central crust. This presentation can sometimes be seen in slow-growing skin cancers such as a basal cell carcinoma.",
+"harm": "moderate",
+"harm_reason": "It is a localized skin cancer that should be evaluated and treated by a physician to prevent it from growing and damaging surrounding tissue.",
+"confidence": 0.75,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\31-classes-of-skin-disease\\Atlas dan ISIC2019 (31 classes)\\train\\Basal Cell Carcinoma\\img_415.jpg": {
+"group": "cancer",
+"condition": "Basal cell carcinoma",
+"description": "This appears as an abnormal, persistent skin lesion with central crusting or ulceration and raised, pearly borders. It is a common type of skin cancer that typically develops on sun-exposed areas and grows slowly.",
+"harm": "serious",
+"harm_reason": "It is a form of skin cancer that requires medical treatment to prevent local tissue damage and potential complications.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\5ffb0f37439ee5e465139feac2b33010.jpg": {
+"group": "benign",
+"condition": "Keloid",
+"description": "The image shows a smooth, raised, firm growth of scar tissue, commonly known as a keloid, extending from the earlobe. Keloids form when the skin heals from an injury, such as piercing, by producing excessive scar tissue that grows beyond the original wound margins.",
+"harm": "mild",
+"harm_reason": "Keloids are benign and not medically dangerous, but they can be uncomfortable, itchy, and difficult to remove.",
+"confidence": 0.95,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\test\\Seborrheic Keratoses and other Benign Tumors\\epidermal-nevus-58.jpg": {
+"group": "warts",
+"condition": "Epidermal nevus",
+"description": "This image shows a collection of small, closely grouped, brownish bumps arranged in a line along the skin. They are typically benign developmental skin markings composed of excess skin cells.",
+"harm": "harmless",
+"harm_reason": "Epidermal nevi are non-cancerous birthmarks that are generally harmless and do not require treatment unless irritated.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\0c01c55eee22e93966c8125652f4509c.jpg": {
+"group": "cancer",
+"condition": "Basal cell carcinoma",
+"description": "This image shows firm, raised bumps or nodules on the forehead, some with central indentation or small crusting areas. These growths can develop from chronic sun exposure over many years. It is important to have skin changes like this evaluated by a healthcare professional.",
+"harm": "moderate",
+"harm_reason": "Skin cancers can locally grow, invade surrounding tissue, and cause significant tissue damage if left untreated, though they rarely spread to other parts of the body.",
+"confidence": 0.8,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\9e6ba9859859657325083c4a26779d3b.jpg": {
+"group": "cancer",
+"condition": "Basal cell carcinoma",
+"description": "This image shows a prominent, raised, ulcerated growth involving the eyelid margin. It appears abnormal and persistent, which often warrants a professional medical evaluation to determine the exact cause.",
+"harm": "serious",
+"harm_reason": "Skin cancers located near the eye can grow locally and damage surrounding structures if not promptly and properly treated.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\5c0d9cb9702cd78188b1a9d908c1c882.jpg": {
+"group": "nail",
+"condition": "Nail dystrophy",
+"description": "The image shows severe thickening, distortion, and partial loss or crumbling of the nail plate on a toe, accompanied by surrounding skin changes. Nail dystrophy can be caused by various factors including trauma, fungal infections, or underlying systemic conditions.",
+"harm": "moderate",
+"harm_reason": "It can be painful, persistent, and should be evaluated by a healthcare professional to determine the underlying cause and appropriate treatment.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Systemic Disease\\acanthosis-nigricans-54.jpg": {
+"group": "eczema",
+"condition": "inverse psoriasis or intertrigo",
+"description": "The image shows a reddish, irritated skin fold in the axilla (armpit) with some scaling and discomfort. This commonly occurs in areas where skin rubs against skin and can be triggered by friction, moisture, or inflammatory skin conditions.",
+"harm": "mild",
+"harm_reason": "While it can be uncomfortable and prone to irritation or secondary infections, it is not life-threatening and can be managed effectively with proper care and medical guidance.",
+"confidence": 0.75,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\test\\Urticaria Hives\\angioedema-12.jpg": {
+"group": "granuloma",
+"condition": "granuloma annulare",
+"description": "The image shows raised, reddish or skin-colored bumps arranged in a ring-like or circular pattern on the back. This condition is often harmless and can appear as localized or widespread rings on the skin.",
+"harm": "harmless",
+"harm_reason": "Granuloma annulare is generally a benign condition that is often asymptomatic and frequently resolves on its own without treatment.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\test\\Urticaria Hives\\hives-Urticaria-Acute-39.jpg": {
+"group": "rash",
+"condition": "Erythema marginatum",
+"description": "The image shows faint, pinkish, ring-shaped rashes with raised edges spreading across the skin of a limb. This type of rash is often associated with inflammatory reactions in the body and can change or shift location relatively quickly.",
+"harm": "moderate",
+"harm_reason": "It can be a sign of an underlying systemic condition that requires medical evaluation and treatment.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Urticaria Hives\\hives-Urticaria-Acute-17.jpg": {
+"group": "urticaria",
+"condition": "urticaria",
+"description": "The image shows raised, pinkish or reddish welts on the skin that appear abruptly and can change shape or shift locations over hours. This is characteristic of hives, which are typically triggered by an allergic reaction or physical stimuli.",
+"harm": "mild",
+"harm_reason": "While hives can be very itchy and uncomfortable, most acute cases resolve on their own or with antihistamines without causing lasting damage.",
+"confidence": 0.95,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Vascular Tumors\\spider-angioma-1.jpg": {
+"group": "vascular",
+"condition": "Spider angioma",
+"description": "The image shows a central red spot with tiny blood vessels radiating outward like a spiderweb, typically found on the face or upper body. This is a common vascular lesion often caused by dilated capillaries near the skin's surface.",
+"harm": "harmless",
+"harm_reason": "Spider angiomas are benign and primarily a cosmetic concern rather than a medical danger.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Vascular Tumors\\angiokeratomas-46.jpg": {
+"group": "vascular",
+"condition": "angiokeratoma of Fordyce",
+"description": "This image shows multiple tiny, dark purple or red papules scattered across the scrotal skin. These are benign clusters of dilated small blood vessels near the surface of the skin.",
+"harm": "harmless",
+"harm_reason": "These vascular lesions are entirely benign and typically require no medical intervention unless they cause irritation.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\f45c9e9dd24903c26f37ae35dfae843b.jpg": {
+"group": "vascular",
+"condition": "Pyogenic granuloma",
+"description": "The image shows a raised, reddish-pink nodule that can bleed easily with minor trauma. This type of benign vascular lesion is composed of a rapid overgrowth of tiny blood vessels, often developing after a minor injury or due to hormonal changes.",
+"harm": "moderate",
+"harm_reason": "While benign, it should be evaluated by a healthcare professional because it can bleed persistently and may require removal.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\0a4e57f9bb53359378d1e5499e385cde.jpg": {
+"group": "blistering",
+"condition": "Stevens-Johnson syndrome / Erythema multiforme",
+"description": "This image shows severe erosions and blistering on the lips, creating painful, raw areas. This type of reaction often involves mucosal surfaces and can be triggered by medications or infections.",
+"harm": "serious",
+"harm_reason": "This condition can be life-threatening and requires immediate medical attention to manage systemic complications and prevent severe tissue damage.",
+"confidence": 0.82,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Vasculitis Photos\\erythema-multiforme-111.jpg": {
+"group": "systemic",
+"condition": "Scurvy",
+"description": "The image shows numerous tiny reddish-brown spots scattered across the legs, particularly around the knees. These spots often represent tiny bleedings around hair follicles, which can be associated with severe nutritional deficiencies like a lack of vitamin C.",
+"harm": "moderate",
+"harm_reason": "Nutritional deficiencies can lead to widespread health issues and systemic symptoms if not addressed by correcting the underlying dietary intake.",
+"confidence": 0.8,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\mpox-skin-lesion-dataset-version-20-msld-v20\\Original Images\\Original Images\\FOLDS\\fold1\\Train\\HFMD\\HFMD_101_01.jpg": {
+"group": "herpes",
+"condition": "Oral herpes (cold sore)",
+"description": "The image shows small, clustered red bumps or early-stage lesions inside the mouth. These are commonly associated with a viral infection such as a cold sore, which can cause temporary irritation and tenderness.",
+"harm": "mild",
+"harm_reason": "Oral herpes is generally a mild, self-limiting condition that heals on its own within a couple of weeks, though it can occasionally be uncomfortable.",
+"confidence": 0.75,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Warts Molluscum and other Viral Infections\\herpes-cutaneous-19.jpg": {
+"group": "herpes",
+"condition": "herpetic whitlow",
+"description": "The image shows grouped small blisters and redness on the finger near the nail fold. This presentation can be characteristic of a viral infection affecting the finger tissue, often caused by the herpes simplex virus.",
+"harm": "mild",
+"harm_reason": "It can be painful and uncomfortable, but it generally resolves on its own or with proper medical care without causing long-term danger.",
+"confidence": 0.85,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\test\\Warts Molluscum and other Viral Infections\\warts-plantar-44.jpg": {
+"group": "warts",
+"condition": "plantar warts",
+"description": "The image shows small, thickened areas of skin on the sole of the foot with tiny dark dots visible in the center. These dark dots are actually small, clotted blood vessels. This is characteristic of plantar warts, which are caused by a common viral infection in the outer layer of the skin.",
+"harm": "mild",
+"harm_reason": "Plantar warts are generally not dangerous and often resolve on their own, though they can sometimes cause discomfort or pain when walking.",
+"confidence": 0.95,
+"model": "gemini-flash-lite-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Warts Molluscum and other Viral Infections\\warts-cryotherapy-4.jpg": {
+"group": "cancer",
+"condition": "squamous cell carcinoma",
+"description": "This image shows a very firm, dark, dome-shaped growth with a central crust or core on the finger. It resembles a keratoacanthoma or an aggressive type of skin cancer that can grow rapidly.",
+"harm": "serious",
+"harm_reason": "This condition requires prompt medical evaluation and treatment because it can be an aggressive form of skin cancer that may grow and spread.",
+"confidence": 0.82,
+"model": "gemini-flash-lite-latest"
+}
+}

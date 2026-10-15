@@ -75,7 +75,7 @@ def main():
             for i in rng.choice(idx, min(args.per_group, len(idx)), replace=False):
                 picks.append({"split": split, "i": int(i), "y": c, "path": part.path[i], "source": part.source[i]})
 
-    cache_file = OUT / f"answers_{gemini.MODEL}.json"
+    cache_file = OUT / f"answers_{gemini.MODEL}_v2.json"  # v2: Gemini may answer "other" (outside the groups)
     cache = json.loads(cache_file.read_text()) if cache_file.exists() else {}
 
     def run(p):
@@ -108,17 +108,22 @@ def main():
         pm = probs[split][[p["i"] for p in rows]]
         g = np.array([keys.index(cache[p["path"]]["group"]) if cache[p["path"]]["group"] in keys else -1 for p in rows])
         conf = np.array([cache[p["path"]]["confidence"] for p in rows])
+        other = np.array([cache[p["path"]]["group"] == "other" for p in rows])
         comb = pm.copy()
         ok = g >= 0
         comb[np.where(ok)[0], g[ok]] += w * conf[ok]
         top3 = np.argsort(-comb, 1)[:, :3]
         return {"n": len(rows), "model": float((pm.argmax(1) == y).mean()), "gemini": float((g == y).mean()),
                 "combined": float((comb.argmax(1) == y).mean()),
+                # what the site shows: Gemini's own answer when it says "other" (always wrong here,
+                # since every evaluation photo belongs to one of the groups), else the combined answer
+                "other_rate": float(other.mean()),
+                "shown": float(((comb.argmax(1) == y) & ~other).mean()),
                 "combined_top3": float((top3 == y[:, None]).any(1).mean()),
                 "model_top3": float((np.argsort(-pm, 1)[:, :3] == y[:, None]).any(1).mean()),
                 "agree": float((pm.argmax(1) == g).mean()),
                 "accuracy_when_agree": float((comb.argmax(1) == y)[pm.argmax(1) == g].mean()),
-                "accuracy_when_differ": float((comb.argmax(1) == y)[pm.argmax(1) != g].mean()),
+                "accuracy_when_differ": float((comb.argmax(1) == y)[(pm.argmax(1) != g) & ~other].mean()),
                 "errors": sum("error" in cache[p["path"]] for p in picks if p["split"] == split)}
 
     val = {w: scores("val", w) for w in WEIGHTS}
