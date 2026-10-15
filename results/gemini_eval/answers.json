@@ -1,0 +1,164 @@
+{
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\e90207e0dc9504a7e3f722813f54cedf.jpg": {
+"group": "acne",
+"condition": "rosacea",
+"description": "The image shows persistent redness, small bumps, and early skin thickening primarily affecting the nose and central face. This appearance is characteristic of rosacea, a common chronic skin condition that causes facial redness and visible texture changes. A medical evaluation can help identify triggers and treatments to keep symptoms under control.",
+"harm": "moderate",
+"harm_reason": "While it is not life-threatening, it can cause persistent discomfort and may slowly worsen or cause noticeable tissue changes without appropriate care.",
+"confidence": 0.9,
+"model": "gemini-flash-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\2c4f8a1c430f2c94a83ee3c531d3cd80.jpg": {
+"group": "acne",
+"condition": "acne vulgaris",
+"description": "The image shows redness, bumps, and textural scarring across the cheek, nose, and jawline. This appearance is characteristic of acne, an inflammatory condition of the oil glands and hair follicles. A dermatologist can help assess the severity and discuss options to manage breakouts and prevent further scarring.",
+"harm": "moderate",
+"harm_reason": "While not life-threatening, inflammatory acne can lead to permanent scarring and emotional distress if not properly evaluated and treated by a doctor.",
+"confidence": 0.95,
+"model": "gemini-flash-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Acne and Rosacea Photos\\hidradenitis-suppurativa-47.jpg": {
+"group": "acne",
+"condition": "hidradenitis suppurativa",
+"description": "The image shows skin within a body fold with scarring, open pores (comedones), and signs of prior inflammation. This appearance is characteristic of hidradenitis suppurativa, a chronic condition involving blocked hair follicles in areas where skin touches skin. A healthcare professional can help evaluate the stage of the condition and provide strategies to manage flare-ups and scarring.",
+"harm": "moderate",
+"harm_reason": "It is a chronic, often painful inflammatory condition that can lead to scarring and recurring infections without appropriate long-term medical management.",
+"confidence": 0.92,
+"model": "gemini-flash-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\c549440b0a69f11aafc317500034ae9e.jpg": {
+"group": "acne",
+"condition": "rhinophyma",
+"description": "The image shows a marked enlargement and thickening of the nose, featuring bumpy, reddish nodules and enlarged pores. This appearance is typical of rhinophyma, a severe form of rosacea that causes progressive tissue growth on the nasal skin. A dermatologist or plastic surgeon can evaluate the area and discuss medical or surgical options to reshape the nose.",
+"harm": "moderate",
+"harm_reason": "While not malignant, it can cause significant disfigurement and may occasionally interfere with nasal breathing if left unmanaged.",
+"confidence": 0.98,
+"model": "gemini-flash-latest"
+},
+"E:\\Nikith_Projects\\datasets\\31-classes-of-skin-disease\\Atlas dan ISIC2019 (31 classes)\\test\\Impetigo\\2825.jpg": {
+"group": "bacterial",
+"condition": "bullous impetigo",
+"description": "The image shows a ruptured blister on the skin that has peeled back, revealing a moist, red base surrounded by loose skin edges. This appearance is characteristic of bullous impetigo, a localized bacterial infection that causes fluid-filled blisters to form and break open easily. A doctor can evaluate the area and provide appropriate treatment to help the skin heal.",
+"harm": "moderate",
+"harm_reason": "It is a contagious bacterial infection that requires proper medical treatment to clear and avoid spreading to other parts of the body or other people.",
+"confidence": 0.82,
+"model": "gemini-flash-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Acne and Rosacea Photos\\nevus-comedonicus-8.jpg": {
+"group": "pigment",
+"condition": "solar lentigines",
+"description": "The image shows diffuse freckling, sun spots (lentigines), and mild uneven pigmentation across the neck, chest, and arms, which are areas commonly exposed to sunlight.",
+"harm": "harmless",
+"harm_reason": "Solar lentigines and sun-related pigmentation are benign, though skin exposed to chronic sun should be routinely checked for unusual or changing moles.",
+"confidence": 0.75,
+"model": "gemini-flash-latest"
+},
+"E:\\Nikith_Projects\\datasets\\skin-disease-dataset\\skin-disease-datasaet\\train_set\\BA- cellulitis\\BA- cellulitis (92).jpg": {
+"group": "bacterial",
+"condition": "cellulitis",
+"description": "The image shows a large, spreading area of redness on the thigh that has been outlined with a marker to track its progression. This appearance is characteristic of cellulitis or erysipelas, which is a bacterial infection affecting the deeper layers of the skin. Prompt evaluation by a healthcare provider is important to monitor and treat the infection.",
+"harm": "moderate",
+"harm_reason": "Bacterial skin infections like cellulitis need timely medical care and prescription treatment to prevent the infection from spreading further into deeper tissues or the bloodstream.",
+"confidence": 0.95,
+"model": "gemini-flash-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\7d571c0abf293de3672b7d73a45d4d13.jpg": {
+"group": "hair",
+"condition": "pseudofolliculitis barbae",
+"description": "The image shows short, tightly curved facial hairs penetrating back into the skin surface, accompanied by small bumps. This commonly happens after shaving when curly hairs curve around and pierce the adjacent skin, leading to mild local irritation.",
+"harm": "mild",
+"harm_reason": "It is a benign inflammatory condition caused by ingrown hairs that can cause itching, bumps, or mild discomfort, but it is not dangerous.",
+"confidence": 0.9,
+"model": "gemini-flash-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\c1f3db0666ffd334a511e89fd9ba7064.jpg": {
+"group": "blistering",
+"condition": "epidermolysis bullosa",
+"description": "The image shows an infant's fingertips with significant skin peeling, redness, and raw erosions consistent with a genetic skin fragility disorder. In conditions like epidermolysis bullosa, the skin is exceptionally fragile and blisters easily in response to minor friction or trauma.",
+"harm": "serious",
+"harm_reason": "Fragile blistering conditions in infants carry high risks of secondary infections, pain, scarring, and complications that require specialized medical care.",
+"confidence": 0.85,
+"model": "gemini-flash-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\055588dd31ede35b688a8f03fdf07ac1.jpg": {
+"group": "eczema",
+"condition": "angular blepharitis",
+"description": "There is a small red, irritated fissure at the outer corner of the eye. This commonly represents angular blepharitis or localized dermatitis, which causes mild cracking and inflammation where tears collect. A doctor or eye specialist can recommend gentle cleansing and appropriate creams to help it heal.",
+"harm": "mild",
+"harm_reason": "While it can be uncomfortable and prone to mild infection if irritated, it is typically straightforward to treat with proper eye care.",
+"confidence": 0.85,
+"model": "gemini-flash-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Bullous Disease Photos\\epidermolysis-bullosa-49.jpg": {
+"group": "eczema",
+"condition": "juvenile plantar dermatosis",
+"description": "The skin on the toes shows peeling, redness, and dry scaling. This is commonly seen in children as a form of foot dermatitis triggered by repeated cycles of sweating and drying in shoes. It often improves with gentle foot care, regular moisturizing, and breathable footwear.",
+"harm": "mild",
+"harm_reason": "While it can cause uncomfortable dryness, peeling, or painful cracking, it is not medically dangerous and usually improves with proper skincare.",
+"confidence": 0.8,
+"model": "gemini-flash-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\dcf7ec9f1c462145f445114b7a45dbbf.jpg": {
+"error": "Gemini is busy right now. Please try again in a minute."
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\be3917e8de363b96d6c8684d8940c7d8.jpg": {
+"group": "cancer",
+"condition": "basal cell carcinoma",
+"description": "The image shows a small, raised bump with a rolled edge and a central crusted ulceration. This pattern is characteristic of basal cell carcinoma, the most common form of skin cancer. A medical evaluation is recommended to confirm the diagnosis and discuss removal.",
+"harm": "serious",
+"harm_reason": "Although this type of skin cancer rarely spreads through the body, it can slowly invade and damage nearby skin and deeper tissues if not removed.",
+"confidence": 0.85,
+"model": "gemini-flash-latest"
+},
+"E:\\Nikith_Projects\\datasets\\31-classes-of-skin-disease\\Atlas dan ISIC2019 (31 classes)\\train\\Epidermolysis Bullosa Pruriginosa\\9797.jpg": {
+"group": "nail",
+"condition": "onychomycosis",
+"description": "The toenails appear thickened, brittle, and discolored with rough surface changes. This presentation is characteristic of a fungal nail infection, which can gradually alter the shape and texture of multiple nails. A healthcare provider can examine the nails and recommend appropriate treatment.",
+"harm": "moderate",
+"harm_reason": "While generally not dangerous, fungal nail infections can worsen over time, cause discomfort, and occasionally lead to secondary skin infections if not properly managed.",
+"confidence": 0.85,
+"model": "gemini-flash-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\4ee18f789cecf807e4672b12a39a6f5c.jpg": {
+"group": "bacterial",
+"condition": "cellulitis",
+"description": "The image shows a well-demarcated area of bright red, swollen, and shiny skin on the lower leg. This appearance is typical of a bacterial skin infection such as cellulitis or erysipelas. Prompt evaluation by a healthcare provider is recommended to prevent the infection from spreading.",
+"harm": "moderate",
+"harm_reason": "Cellulitis is a bacterial skin infection that can worsen or spread if not treated with appropriate prescription antibiotics.",
+"confidence": 0.85,
+"model": "gemini-flash-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\a97e96cf25c7b53568da1f4f98d16a07.jpg": {
+"group": "mole",
+"condition": "Becker's nevus",
+"description": "The image shows a localized, slightly raised patch with noticeable hair growth on the arm. Becker's nevus is a benign birthmark or hamartoma that typically features increased pigmentation and localized hair. It is non-cancerous and commonly appears during childhood or adolescence.",
+"harm": "harmless",
+"harm_reason": "Becker's nevus is a benign skin change that does not pose any danger to your general health.",
+"confidence": 0.75,
+"model": "gemini-flash-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\62adc44d79d88442ad1945602c548a6f.jpg": {
+"group": "blistering",
+"condition": "pemphigoid gestationis",
+"description": "The images show widespread itchy red plaques and tense blisters on the abdomen and body of a woman associated with pregnancy, alongside an infant with transient similar skin lesions. Pemphigoid gestationis is a rare autoimmune blistering skin condition triggered by pregnancy, where antibodies can sometimes temporarily cross to the newborn.",
+"harm": "moderate",
+"harm_reason": "While usually resolving postpartum, it causes significant discomfort and carries risks such as preterm birth or low birth weight that require obstetric and dermatologic management.",
+"confidence": 0.95,
+"model": "gemini-flash-latest"
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Eczema Photos\\eczema-chronic-34.jpg": {
+"group": "blistering",
+"condition": "Grover disease",
+"description": "The image shows multiple small, red, itchy crusted bumps scattered across the upper back of an older individual. This appearance is characteristic of Grover disease (transient acantholytic dermatosis), a condition that causes sudden or recurring itchy papules on the trunk. It is often triggered or aggravated by heat, sweating, or sun exposure.",
+"harm": "mild",
+"harm_reason": "While it can cause uncomfortable itching, the condition is not dangerous and does not cause serious internal harm.",
+"confidence": 0.85,
+"model": "gemini-flash-latest"
+},
+"E:\\Nikith_Projects\\datasets\\fitzpatrick17k-original\\finalfitz17k\\c8f82a865ebefc3ce3cdbe5f70fbfc14.jpg": {
+"error": "Gemini is busy right now. Please try again in a minute."
+},
+"E:\\Nikith_Projects\\datasets\\dermnet\\train\\Atopic Dermatitis Photos\\05atopicFace040306.jpg": {
+"error": "Gemini is busy right now. Please try again in a minute."
+}
+}

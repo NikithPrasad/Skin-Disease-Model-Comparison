@@ -277,6 +277,10 @@ def main():
         Image.fromarray(np.asarray(sets["test"][0][pick])).save(ex_dir / f"{key}.jpg", quality=92)
         meta["examples"][key] = Path(paths[pick]).stem[:16]
 
+    old = app / "models" / "meta.json"  # keep the Gemini evaluation (src/gemini_eval.py) across re-exports
+    if old.exists():
+        prev = json.loads(old.read_text())
+        meta.update({k: prev[k] for k in ["gemini", "accuracy_by_confidence"] if k in prev})
     meta = json.loads(json.dumps(meta, default=float))
     (app / "models" / "meta.json").write_text(json.dumps(meta, indent=1))
     confusion_figures(pt, yt, app / "static" / "figures")
