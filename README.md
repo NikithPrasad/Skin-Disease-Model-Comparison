@@ -2,6 +2,8 @@
 
 Compares four image classifiers on the HAM10000 dermoscopy dataset (10,015 images, 7 lesion classes):
 
+![Demo screenshot](assets/demo.png)
+
 | Model | Type | Why it is in the comparison |
 |---|---|---|
 | CNN (scratch) | Custom CNN (strided stem + 4 conv blocks), 2.4M params, trained from random weights | Baseline: what you get without transfer learning |
